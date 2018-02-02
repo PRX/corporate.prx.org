@@ -1,0 +1,7 @@
+<div>
+  {.section items}
+    {.repeated section @}
+      <h4>{collection.navigationTitle}</h4>
+    {.end}
+  {.end}
+</div>

@@ -1,6 +1,12 @@
   <p>(tail)</p>
 
+  <!-- Footer Block -->
+  {@|apply footer.block}
+  <!-- End Footer Block -->
+
+  <!-- Squarespace Footers -->
   {squarespace-footers}
+  <!-- End Squarespace Footers -->
 
 </body>
 </html>
