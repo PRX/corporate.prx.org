@@ -1,6 +1,5 @@
 <div style="min-height: 100px; background: #1C1C1C;">
   <h1 style="text-align: center; padding: 60px 0; color: #ececec">Footer — Placeholder</h1>
-
-    <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
-    <squarespace:navigation navigationId="footerNav" template="footer-nav" />
+  <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
+  <squarespace:navigation navigationId="footerNav" template="footer-nav" />
 </div>
