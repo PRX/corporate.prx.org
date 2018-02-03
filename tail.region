@@ -1,4 +1,4 @@
-  <p>(tail)</p>
+  <p>Start of TAIL region ----------------</p>
 
   <!-- Footer Block -->
   {@|apply footer.block}

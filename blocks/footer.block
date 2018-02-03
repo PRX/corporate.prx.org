@@ -1,5 +1,4 @@
-<footer id="prx-footer">
-  <h1 style="text-align: center; padding: 60px 0; color: #ececec">Footer — Placeholder</h1>
+<footer id=prx-footer>
   <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
   <squarespace:navigation navigationId="footerNav" template="footer-nav" />
 </footer>

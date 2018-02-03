@@ -1,4 +1,4 @@
-<div data-content-field=main-content>
+<div role=main data-content-field=main-content>
   <squarespace:block-field id="servicesIntroBlock" columns="12" label="Services Intro Content" />
   {squarespace.main-content}
 </div>

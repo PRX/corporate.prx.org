@@ -14,5 +14,8 @@
   <body class="{squarespace.page-classes}" id="{squarespace.page-id}">
     {@|apply google-tag-manager-noscript.block}
 
+    <p>Start of HEAD region -------------</p>
+
     <h1>PRX</h1>
-    <h2>(head)</h2>
+
+    <p>End of HEAD region -------------</p>

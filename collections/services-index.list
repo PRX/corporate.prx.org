@@ -1,0 +1,13 @@
+{.section collection}
+  {.section collections}
+    <nav>
+      {.repeated section @}
+        <a href="#{urlId}">{title}</a>
+      {.end}
+    </nav>
+  {.end}
+
+  {.repeated section collections}
+    <section>{mainContent}</section>
+  {.end}
+{.end}

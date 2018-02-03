@@ -1,3 +1,3 @@
-<div data-content-field=main-content>
+<div role=main data-content-field=main-content class=prx-region-sparse>
   {squarespace.main-content}
 </div>
