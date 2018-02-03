@@ -9,6 +9,8 @@
 
     <title>PRX</title>
 
+    <squarespace:script src="main.js" combo="false" />
+
     {squarespace-headers}
   </head>
   <body class="{squarespace.page-classes}" id="{squarespace.page-id}">

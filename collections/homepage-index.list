@@ -1,5 +1,12 @@
-{.section collection}
-  {.repeated section collections}
-    <section>{mainContent}</section>
+<div id=prx-homepage-index-list>
+  {.section collection}
+    {.repeated section collections}
+      <section>
+        <img {mainImage|image-meta} data-load=false class=section-bg-image />
+        <div data-content-field=main-content class=main-content>
+          {mainContent}
+        </div>
+      </section>
+    {.end}
   {.end}
-{.end}
+</div>
