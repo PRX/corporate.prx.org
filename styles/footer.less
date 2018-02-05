@@ -1,5 +1,6 @@
 // tweak: { "type": "color", "title": "Footer Background Color" }
 @prxFooterBackgroundColor: #1C1C1C;
+@prxFooterTextColor: #D8D8D8;
 
 #prx-footer {
   background-color: @prxFooterBackgroundColor;
@@ -18,14 +19,14 @@
   display: flex;
   flex-direction: column;
   margin: 20px;
+  color: @prxFooterTextColor;
 }
 
 .prx-footer-nav-subnav h4 {
   text-transform: uppercase;
-  color: red;
 }
 .prx-footer-nav-subnav a {
   text-decoration: none; // move this to reset
-  color: green;
+  color: @prxFooterTextColor; // nix this once reset exists, since it can inherit
   margin: 10px 0;
 }
