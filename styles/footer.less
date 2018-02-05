@@ -5,3 +5,24 @@
   background-color: @prxFooterBackgroundColor;
   color: rgba(255, 255, 255, 0.7);
 }
+
+.prx-footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.prx-footer-nav-subnav {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.prx-footer-nav-subnav h4 {
+  text-transform: uppercase;
+  color: red;
+}
+.prx-footer-nav-subnav a {
+  text-decoration: none; // move this to reset
+  color: green;
+  margin: 10px 0;
+}

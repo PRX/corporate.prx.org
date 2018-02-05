@@ -1,12 +1,14 @@
-<div>
+<div class=prx-footer-nav>
   {.section items}
     {.repeated section @}
-      <h4 style="color: red;">{collection.navigationTitle}</h4>
-      {.repeated section items}
-        {.section externalLink}
-          <p style="color: green;">{title}</p>
+      <div class=prx-footer-nav-subnav>
+        <h4>{collection.navigationTitle}</h4>
+        {.repeated section items}
+          {.section externalLink}
+            <a href="{url}" target="_blank">{title}</a>
+          {.end}
         {.end}
-      {.end}
+      </div>
     {.end}
   {.end}
 </div>
