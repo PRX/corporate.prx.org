@@ -1,25 +1,38 @@
 // tweak: { "type": "color", "title": "Footer Background Color" }
 @prxFooterBackgroundColor: #1C1C1C;
-@prxFooterTextColor: #D8D8D8;
+@prxFooterTextColor: rgba(255, 255, 255, 0.7);
 
 #prx-footer {
   background-color: @prxFooterBackgroundColor;
-  color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 30px;
+  color: @prxFooterTextColor;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo . nav"
+    "info . nav"
+}
+
+#footerLogoSocial {
+  background: blue;
+  grid-area: logo;
+}
+
+#footerInfo {
+  background: red;
+  grid-area: info;
 }
 
 .prx-footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  grid-area: nav;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
+
 .prx-footer-nav-subnav {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  color: @prxFooterTextColor;
+  display: grid;
 }
 
 .prx-footer-nav-subnav h4 {
@@ -29,4 +42,20 @@
   text-decoration: none; // move this to reset
   color: @prxFooterTextColor; // nix this once reset exists, since it can inherit
   margin: 10px 0;
+}
+
+@media (max-width: 540px) {
+  #prx-footer {
+    grid-template-areas:
+      "logo"
+      "nav"
+      "info"
+  }
+
+  .prx-footer-nav {
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: auto;
+  }
+
 }
