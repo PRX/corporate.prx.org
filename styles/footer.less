@@ -15,6 +15,7 @@
 }
 
 #footerLogoSocial {
+  margin-top: 10px;
   grid-area: logo;
 }
 
@@ -31,15 +32,18 @@
 
 .prx-footer-nav-subnav {
   display: grid;
+  font-weight: lighter;
+  margin: 10px 0;
 }
 
 .prx-footer-nav-subnav h4 {
   text-transform: uppercase;
+
 }
 .prx-footer-nav-subnav a {
-  text-decoration: none; // move this to reset
-  color: @prxFooterTextColor; // nix this once reset exists, since it can inherit
-  margin: 10px 0;
+  color: @prxFooterTextColor;
+  margin: 5px 0;
+  font-size: 14px;
 }
 
 @media (max-width: 620px) {
