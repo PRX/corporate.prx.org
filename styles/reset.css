@@ -6,6 +6,7 @@ a {
   vertical-align: baseline;
   background: 0 0;
   text-decoration: none;
+  color: inherit;
 }
 
 article, aside, details, figure, footer, header, hr, nav, section, summary {

@@ -15,9 +15,6 @@
   </head>
   <body class="{squarespace.page-classes}" id="{squarespace.page-id}">
     {@|apply google-tag-manager-noscript.block}
-
-    <p>Start of HEAD region -------------</p>
-
-    <h1>PRX</h1>
-
-    <p>End of HEAD region -------------</p>
+    <squarespace:navigation navigationId="mainNav" template="main-nav" />
+  </body>
+</html>

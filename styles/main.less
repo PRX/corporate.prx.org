@@ -2,3 +2,28 @@ body {
   font-family: sans-serif;
 }
 
+.prx-main-nav {
+  background-color: @prxFooterHeaderBackgroundColor;
+  color: @prxFooterHeaderTextColor;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.prx-main-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.prx-main-nav li {
+  text-transform: uppercase;
+  margin: 20px 30px;
+}
+.prx-nav-menu {
+  display: none;
+}
+@media (max-width: @smallScreenWidth) {
+  .prx-main-nav ul{
+    display: none;
+  }
+  .prx-nav-menu {
+    display: block;
+  }
+}
