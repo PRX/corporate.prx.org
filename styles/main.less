@@ -1,5 +1,6 @@
 @prxFooterHeaderBackgroundColor: #1C1C1C;
 @prxFooterHeaderTextColor: rgba(255, 255, 255, 0.7);
+@prxActiveLinkColor: red; // TODO change
 @smallScreenWidth: 620px;
 
 body {
@@ -19,6 +20,9 @@ body {
 .prx-main-nav li {
   text-transform: uppercase;
   margin: 20px 30px;
+}
+.prx-main-nav li.active-link{
+  color: @prxActiveLinkColor;
 }
 .prx-nav-menu {
   display: none;
