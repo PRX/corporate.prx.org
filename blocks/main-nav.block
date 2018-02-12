@@ -1,12 +1,14 @@
 <nav class=prx-main-nav>
   <h1>PRX logo TK</h1>
   <ul>
-    {.section items}
-      {.repeated section @}
-        <li>
-          <a href="{url}">{collection.navigationTitle}</a>
-        </li>
+    {.repeated section items}
+    <li class="{.section active} active-link{.end}">
+
+      {.section collection}
+        <a href="{fullUrl}">{navigationTitle}</a>
       {.end}
+
+    </li>
     {.end}
   </ul>
   <div class=prx-nav-menu>hamburger menu</div>
