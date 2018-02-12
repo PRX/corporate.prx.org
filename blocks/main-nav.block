@@ -1,7 +1,8 @@
 <nav class=prx-main-nav>
-  <h1>PRX logo TK</h1>
+
   <ul>
     {.repeated section items}
+
     <li class="{.section active} active-link{.end}">
 
       {.section collection}
@@ -10,6 +11,8 @@
 
     </li>
     {.end}
+
   </ul>
   <div class=prx-nav-menu>hamburger menu</div>
+
 </nav>
