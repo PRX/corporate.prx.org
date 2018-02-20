@@ -1,0 +1,10 @@
+<div class=prx-company-nav>
+  {.section items}
+    <h4>{collection.navigationTitle}</h4>
+    {.repeated section items}
+      {.section externalLink}
+        <a href="{url}" target="_blank">{title}</a>
+      {.end}
+    {.end}
+  {.end}
+</div>
