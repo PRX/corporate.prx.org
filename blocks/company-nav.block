@@ -1,10 +1,19 @@
-<div class=prx-company-nav>
-  {.section items}
-    <h4>{collection.navigationTitle}</h4>
+<nav class=prx-company-nav>
+  <ul>
+
     {.repeated section items}
-      {.section externalLink}
-        <a href="{url}" target="_blank">{title}</a>
+    <li class="{.section active} active-link{.end}">
+
+      {.section collection}
+        <a href="{fullUrl}">{navigationTitle}</a>
       {.end}
+
+      {.section externalLink}
+        <a href="{url}"{.section newWindow} target="_blank"{.end}>{title}</a>
+      {.end}
+
+    </li>
     {.end}
-  {.end}
-</div>
+
+  </ul>
+</nav>
