@@ -2,18 +2,19 @@
 @prxFooterHeaderTextColor: rgba(255, 255, 255, 0.7);
 @prxActiveLinkColor: red; // TODO change
 @smallScreenWidth: 620px;
+@mainNavHeight: 80px;
 
 body {
   font-family: sans-serif;
 }
 
-.prx-main-nav {
-  background-color: @prxFooterHeaderBackgroundColor;
-  color: @prxFooterHeaderTextColor;
-}
 .prx-main-nav ul {
   display: flex;
   justify-content: space-between;
+  background-color: @prxFooterHeaderBackgroundColor;
+  color: @prxFooterHeaderTextColor;
+  height: @mainNavHeight;
+  align-items: center;
 }
 .prx-main-nav li {
   text-transform: uppercase;

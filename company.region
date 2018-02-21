@@ -1,4 +1,3 @@
-<p>Start of company.region ----------------</p>
 <squarespace:navigation navigationId="companyNav" template="company-nav" />
 <div role=main data-content-field=main-content>
   <squarespace:block-field id="companyIntroBlock" columns="12" label="Company Intro Content" />
