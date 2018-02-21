@@ -1,0 +1,38 @@
+#prx-main-nav {
+  background-color: @prxFooterHeaderBackgroundColor;
+  color: @prxFooterHeaderTextColor;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 1px;
+      opacity: 0.7;
+
+      &.active {
+        color: @prxActiveLinkColor;
+      }
+
+      a {
+        display: block;
+        font-weight: inherit;
+      }
+    }
+  }
+}
+
+.prx-main-nav li
+.prx-nav-menu {
+  display: none;
+}
+@media (max-width: @smallScreenWidth) {
+  .prx-main-nav ul{
+    display: none;
+  }
+  .prx-nav-menu {
+    display: block;
+  }
+}

@@ -1,35 +1,29 @@
-@prxFooterHeaderBackgroundColor: #1C1C1C;
-@prxFooterHeaderTextColor: rgba(255, 255, 255, 0.7);
-@prxActiveLinkColor: red; // TODO change
-@smallScreenWidth: 620px;
+// Squarespace includes a lot of CSS, including a reset, that can't really be
+// removed
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif !important;
+}
 
 body {
-  font-family: sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.618;
 }
 
-.prx-main-nav {
-  background-color: @prxFooterHeaderBackgroundColor;
-  color: @prxFooterHeaderTextColor;
-}
-.prx-main-nav ul {
-  display: flex;
-  justify-content: space-between;
-}
-.prx-main-nav li {
-  text-transform: uppercase;
-  margin: 20px 30px;
-}
-.prx-main-nav li.active-link{
-  color: @prxActiveLinkColor;
-}
-.prx-nav-menu {
-  display: none;
-}
-@media (max-width: @smallScreenWidth) {
-  .prx-main-nav ul{
-    display: none;
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
   }
-  .prx-nav-menu {
-    display: block;
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
   }
+}
+
+
+#prx-services {
+  margin: 0 auto;
+  max-width: 1105px;
 }
