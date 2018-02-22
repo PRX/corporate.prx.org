@@ -1,0 +1,45 @@
+@companyNavBackgroundColor: grey;
+@companyNavTextColor: white;
+@companyNavActiveLinkColor: black;
+@companyNavHeight: 80px;
+@goldBarColor: #FFB217;
+@smallScreenWidth: 620px;
+
+.prx-company-nav ul {
+  height: @companyNavHeight;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: @companyNavBackgroundColor;
+  color: @companyNavTextColor;
+  align-items: center;
+}
+.prx-company-nav a {
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+}
+.prx-company-nav li.active-link {
+  color: @companyNavActiveLinkColor;
+}
+
+.about-company {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.prx-about-company-nav {
+  flex-grow: 1;
+  min-width: 200px;
+  margin: 30px;
+  padding: 40px 0 40px 0;
+  border-top: 6px solid @goldBarColor;
+}
+.prx-about-main-content {
+  flex-grow: 3;
+}
+
+@media (max-width: @smallScreenWidth) {
+  .prx-about-company-nav  {
+    display: none;
+  }
+}
