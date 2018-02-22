@@ -8,5 +8,5 @@
       </li>
     {.end}
   </ul>
-  {#  <div class=prx-nav-menu>hamburger menu</div>  }
+  <button id="prx-main-nav-menu-button">X</button>
 </nav>
