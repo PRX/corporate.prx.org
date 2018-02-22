@@ -1,4 +1,4 @@
-<nav class=prx-company-about-nav>
+<nav class=prx-about-company-nav>
   <ul>
 
     {.repeated section items}
