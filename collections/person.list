@@ -1,0 +1,13 @@
+{.repeated section items}
+
+  <article class="prx-person">
+    <h1 class="name" data-content-field="firstLastName">
+      {firstLastName}
+    </h1>
+    <h1 class="name" data-content-field="identifyingInfo">
+      {identifyingInfo}
+    </h1>
+    <img src="{headshot}">
+  </article>
+
+{.end}
