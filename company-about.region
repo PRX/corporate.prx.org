@@ -1,0 +1,6 @@
+<section class=company-about>
+  <squarespace:navigation navigationId="companyAboutNav" template="company-about-nav" />
+  <div role=main data-content-field=main-content>
+    {squarespace.main-content}
+  </div>
+</section>
