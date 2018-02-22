@@ -1,4 +1,4 @@
-<div role=main data-content-field=main-content id=prx-services>
-  <squarespace:block-field id="servicesIntroBlock" columns="12" label="Services Intro Content" />
+<div role=main data-content-field=main-content id=prx-region-services class=prx-region-root>
+  <squarespace:block-field id=prx-services-header columns=12 label="Services Header" />
   {squarespace.main-content}
 </div>

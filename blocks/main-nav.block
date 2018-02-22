@@ -8,5 +8,5 @@
       </li>
     {.end}
   </ul>
-  <div class=prx-nav-menu>hamburger menu</div>
+  {#  <div class=prx-nav-menu>hamburger menu</div>  }
 </nav>

@@ -9,7 +9,7 @@
 
     <link rel=alternate type=application/rss+xml title="PRX Blog" href=https://medium.com/feed/public-radio-exchange>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Montserrat:300,500,700|Open+Sans:300,400,400i,700,700i" rel="stylesheet">
 
     {@|apply google-tag-manager.block}
 

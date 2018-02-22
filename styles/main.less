@@ -1,5 +1,6 @@
-// Squarespace includes a lot of CSS, including a reset, that can't really be
-// removed
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Alegreya', serif;
 
 html {
   font-size: 62.5%;
@@ -9,21 +10,34 @@ html {
 body {
   font-size: 1.8rem;
   line-height: 1.618;
+  color: @prxTextColor;
+}
+@media (max-width: 684px) { body { font-size: 1.325rem; } }
+@media (max-width: 382px) { body { font-size: 1.2rem; } }
+
+::selection {
+  background-color: @prxOrange;
 }
 
-@media (max-width: 684px) {
-  body {
-    font-size: 1.53rem;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prx-region-root {
+  h1 {
+    font-size: 2.35em;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
   }
-}
-@media (max-width: 382px) {
-  body {
-    font-size: 1.35rem;
+
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.75em;
   }
-}
 
-
-#prx-services {
-  margin: 0 auto;
-  max-width: 1105px;
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
 }

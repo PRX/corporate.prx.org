@@ -1,4 +1,4 @@
 <p>Start of homepage.region ----------------</p>
-<div role=main data-content-field=main-content>
+<div role=main data-content-field=main-content id=prx-region-homepage class=prx-region-root>
   {squarespace.main-content}
 </div>

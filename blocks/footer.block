@@ -1,5 +1,0 @@
-<footer id=prx-footer>
-  <squarespace:block-field id="footerLogoSocial" columns="12" label="Footer Logo and Social" />
-  <squarespace:block-field id="footerInfo" columns="12" label="Footer Info" />
-  <squarespace:navigation navigationId="footerNav" template="footer-nav" />
-</footer>
