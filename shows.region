@@ -1,5 +1,4 @@
-<p>Start of shows.region ----------------</p>
-<div role=main data-content-field=main-content>
-  <squarespace:block-field id="showsIntroBlock" columns="12" label="Shows Intro Content" />
+<div role=main data-content-field=main-content id=prx-region-shows class=prx-region-root></div>
+  <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
   {squarespace.main-content}
 </div>
