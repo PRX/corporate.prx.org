@@ -1,5 +1,13 @@
 {.section collection}
-  {.repeated section collections}
-    <section>{mainContent}</section>
-  {.end}
+  <div class=prx-index-list>
+    {.repeated section collections}
+      <div class=prx-index-list-section>
+        {.section mainImage}
+          <img {@|image-meta} class=prx-splash>
+        {.end}
+
+        <section>{mainContent}</section>
+      </div>
+    {.end}
+  </div>
 {.end}
