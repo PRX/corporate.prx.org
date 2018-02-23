@@ -1,5 +1,4 @@
-<squarespace:navigation navigationId="companyNav" template="company-nav" />
-
 <div role=main data-content-field=main-content id=prx-region-company class=prx-region-root>
+<squarespace:navigation navigationId="companyNav" template="company-nav" />
   {squarespace.main-content}
 </div>

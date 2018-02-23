@@ -1,0 +1,21 @@
+#prx-company-nav {
+  ul {
+    margin: 0;
+    font-size: 0.85em;
+    font-weight: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: @companyNavBackgroundColor;
+    color: @companyNavTextColor;
+    align-items: center;
+  }
+  a {
+    display: block;
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+  }
+  li.active-link {
+    color: @companyNavActiveLinkColor;
+  }
+}
