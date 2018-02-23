@@ -2,7 +2,7 @@
 function loadAllImages() {
   var images = document.querySelectorAll('img[data-src]' );
   for (var i = 0; i < images.length; i++) {
-    ImageLoader.load(images[i], {load: true});
+    ImageLoader.load(images[i], { load: true });
   }
 }
 

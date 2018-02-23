@@ -1,0 +1,7 @@
+<footer id=prx-main-footer>
+  <div>
+    <squarespace:block-field id=prx-main-footer-social columns=12 label="Footer Logo and Social" />
+    <squarespace:block-field id=prx-main-footer-legal columns=12 label="Legal Info" />
+    <squarespace:navigation navigationId=footerNav template=main-footer-nav />
+  </div>
+</footer>

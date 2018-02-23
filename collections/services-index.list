@@ -8,6 +8,6 @@
   {.end}
 
   {.repeated section collections}
-    <section>{mainContent}</section>
+    <section id="{urlId}">{mainContent}</section>
   {.end}
 {.end}

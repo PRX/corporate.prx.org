@@ -1,7 +1,5 @@
-  <p>Start of TAIL region ----------------</p>
-
   <!-- Footer Block -->
-  {@|apply footer.block}
+  {@|apply main-footer.block}
   <!-- End Footer Block -->
 
   <!-- Squarespace Footers -->

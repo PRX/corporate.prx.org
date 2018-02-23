@@ -1,36 +1,51 @@
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Alegreya', serif;
+
 @prxFooterHeaderBackgroundColor: #1C1C1C;
 @prxFooterHeaderTextColor: rgba(255, 255, 255, 0.7);
 @prxActiveLinkColor: red; // TODO change
 @smallScreenWidth: 620px;
 @mainNavHeight: 80px;
 
-body {
-  font-family: sans-serif;
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
-.prx-main-nav ul {
-  display: flex;
-  justify-content: space-between;
-  background-color: @prxFooterHeaderBackgroundColor;
-  color: @prxFooterHeaderTextColor;
-  height: @mainNavHeight;
-  align-items: center;
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  color: @prxTextColor;
 }
-.prx-main-nav li {
-  text-transform: uppercase;
-  margin: 20px 30px;
+@media (max-width: 684px) { body { font-size: 1.325rem; } }
+@media (max-width: 382px) { body { font-size: 1.2rem; } }
+
+::selection {
+  background-color: @prxOrange;
 }
-.prx-main-nav li.active-link{
-  color: @prxActiveLinkColor;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
-.prx-nav-menu {
-  display: none;
-}
-@media (max-width: @smallScreenWidth) {
-  .prx-main-nav ul {
-    display: none;
+
+.prx-region-root {
+  h1 {
+    font-size: 2.35em;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
   }
-  .prx-nav-menu {
-    display: block;
+
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.75em;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
   }
 }
