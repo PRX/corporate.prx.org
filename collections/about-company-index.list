@@ -1,0 +1,15 @@
+{.section collection}
+  {.section collections}
+    <nav class=prx-about-company-nav>
+      {.repeated section @}
+        <a href="#{urlId}">{title}</a>
+      {.end}
+    </nav>
+  {.end}
+
+  <section class=prx-about-company-content>
+    {.repeated section collections}
+      <section id="{urlId}">{mainContent}</section>
+    {.end}
+  </section>
+{.end}
