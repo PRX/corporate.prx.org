@@ -1,0 +1,38 @@
+#prx-region-about-company {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .prx-about-company-nav {
+    flex-grow: 1;
+    min-width: 200px;
+    margin: 30px;
+    padding: 40px 0 0 0;
+    border-top: 6px solid @prxOrange;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prx-about-company-nav a:last-child {
+    padding-bottom: 40px;
+    border-bottom: 1px solid @prxGrey;
+  }
+
+  a {
+    color: @prxBlack;
+    text-decoration: none;
+  }
+
+  .prx-about-company-content {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: @smallScreenWidth) {
+    .prx-about-company-nav  {
+      display: none;
+    }
+  }
+}

@@ -7,7 +7,9 @@
     </nav>
   {.end}
 
-  {.repeated section collections}
-    <section id="{urlId}">{mainContent}</section>
-  {.end}
+  <section class=prx-about-company-content>
+    {.repeated section collections}
+      <section id="{urlId}">{mainContent}</section>
+    {.end}
+  </section>
 {.end}
