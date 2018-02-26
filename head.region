@@ -21,4 +21,7 @@
   </head>
   <body class="{squarespace.page-classes}" id="{squarespace.page-id}">
     {@|apply google-tag-manager-noscript.block}
-    <squarespace:navigation navigationId="mainNav" template="main-nav" />
+
+    <div class="{.equal?:collection.urlId:"home"}prx-home{.end}">
+      <squarespace:navigation navigationId="mainNav" template="main-nav" />
+    </div>
