@@ -2,26 +2,6 @@
 
   <squarespace:navigation navigationId="companyNav" template="company-nav" />
 
-  <squarespace:query collection=people-collection columns=12 limit=3>
-    <ul class=prx-people-tiles>
-      {.repeated section items}
-        <li>
-          <a href="{sourceUrl}">
-            {.main-image?}
-              <img class=person-headshot {@|image-meta} />
-            {.or}
-              <img class=person-headshot src=http://via.placeholder.com/300x300 />
-            {.end}
-
-            <h1>{firstLastName}</h1>
-            <p>{identifyingInfo}</p>
-
-          </a>
-        </li>
-      {.end}
-    </ul>
-  </squarespace:query>
-
   <section class=prx-about-company-main>
     {squarespace.main-content}
   </section>
