@@ -1,4 +1,7 @@
 <p>Start of homepage.region ----------------</p>
+
+{@|apply homepage-show-carousel.block}
+
 <div role=main data-content-field=main-content id=prx-region-homepage class=prx-region-root>
   {squarespace.main-content}
 </div>

@@ -1,0 +1,25 @@
+<squarespace:block-field id=prx-homepage-content-header columns=12 label="Content Header" />
+
+<div>
+  <squarespace:query collection=shows-collection columns=12>
+    <ul class=prx-show-tiles>
+      {.repeated section items}
+        <li class="{.if customContent.artworkBorder}artwork-border{.end}">
+          <a href="{sourceUrl}">
+            {.main-image?}
+              <img class=show-artwork {@|image-meta} />
+            {.or}
+              <img class=show-artwork src=http://via.placeholder.com/300x300>
+            {.end}
+
+            <span class=show-morsel>
+              <h1>{title}</h1>
+              <p>{excerpt}</p>
+              <form><button formaction="{sourceUrl}">Learn more</button></form>
+            </span>
+          </a>
+        </li>
+      {.end}
+    </ul>
+  </squarespace:query>
+</div>
