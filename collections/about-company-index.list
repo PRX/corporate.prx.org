@@ -18,16 +18,14 @@
             <ul class=prx-people-tiles>
               {.repeated section items}
               <li>
-                <a href="{sourceUrl}">
-                  {.main-image?}
-                  <img class=person-headshot {@|image-meta} />
-                  {.or}
-                  <img class=person-headshot src=http://via.placeholder.com/300x300 />
-                  {.end}
+                {.main-image?}
+                <img class=person-headshot {@|image-meta} />
+                {.or}
+                <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                {.end}
 
-                  <h1>{title}</h1>
-                  <p>{excerpt}</p>
-                </a>
+                <h1>{title}</h1>
+                <p>{excerpt}</p>
               </li>
               {.end}
             </ul>
@@ -42,16 +40,14 @@
             <ul class=prx-people-tiles>
               {.repeated section items}
               <li>
-                <a href="{sourceUrl}">
-                  {.main-image?}
-                  <img class=person-headshot {@|image-meta} />
-                  {.or}
-                  <img class=person-headshot src=http://via.placeholder.com/300x300 />
-                  {.end}
+                {.main-image?}
+                <img class=person-headshot {@|image-meta} />
+                {.or}
+                <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                {.end}
 
-                  <h1>{title}</h1>
-                  <p>{excerpt}</p>
-                </a>
+                <h1>{title}</h1>
+                <p>{excerpt}</p>
               </li>
               {.end}
             </ul>
