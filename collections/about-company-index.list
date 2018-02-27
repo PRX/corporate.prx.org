@@ -25,8 +25,8 @@
                   <img class=person-headshot src=http://via.placeholder.com/300x300 />
                   {.end}
 
-                  <h1>{customContent.firstLastName}</h1>
-                  <p>{customContent.identifyingInfo}</p>
+                  <h1>{title}</h1>
+                  <p>{excerpt}</p>
                 </a>
               </li>
               {.end}
@@ -49,8 +49,8 @@
                   <img class=person-headshot src=http://via.placeholder.com/300x300 />
                   {.end}
 
-                  <h1>{customContent.firstLastName}</h1>
-                  <p>{customContent.identifyingInfo}</p>
+                  <h1>{title}</h1>
+                  <p>{excerpt}</p>
                 </a>
               </li>
               {.end}
