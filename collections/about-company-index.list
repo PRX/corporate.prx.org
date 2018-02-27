@@ -10,6 +10,51 @@
   <section class=prx-about-company-content>
     {.repeated section collections}
       <section id="{urlId}">{mainContent}</section>
+
+      {.equal?:urlId:"staff"}
+        <div class="prx-staff">
+          <squarespace:query collection=staff-collection columns=12 limit=6>
+
+            <ul class=prx-people-tiles>
+              {.repeated section items}
+              <li>
+                {.main-image?}
+                <img class=person-headshot {@|image-meta} />
+                {.or}
+                <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                {.end}
+
+                <h3>{title}</h3>
+                <p>{excerpt}</p>
+              </li>
+              {.end}
+            </ul>
+          </squarespace:query>
+        </div>
+      {.end}
+
+      {.equal?:urlId:"board-members"}
+        <div class="prx-board">
+          <squarespace:query collection=board-collection columns=12 limit=6>
+
+            <ul class=prx-people-tiles>
+              {.repeated section items}
+              <li>
+                {.main-image?}
+                <img class=person-headshot {@|image-meta} />
+                {.or}
+                <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                {.end}
+
+                <h3>{title}</h3>
+                <p>{excerpt}</p>
+              </li>
+              {.end}
+            </ul>
+          </squarespace:query>
+        </div>
+      {.end}
+
     {.end}
   </section>
 {.end}
