@@ -13,7 +13,7 @@
 
       {.equal?:urlId:"staff"}
         <div class="prx-staff">
-          <squarespace:query collection=people-collection columns=12 limit=3>
+          <squarespace:query collection=people-collection columns=12 limit=6>
 
             <ul class=prx-people-tiles>
               {.repeated section items}
@@ -37,7 +37,7 @@
 
       {.equal?:urlId:"board-members"}
         <div class="prx-board">
-          <squarespace:query collection=people-collection columns=12 limit=3>
+          <squarespace:query collection=people-collection columns=12 limit=6>
 
             <ul class=prx-people-tiles>
               {.repeated section items}
