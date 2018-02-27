@@ -24,8 +24,11 @@
                 <img class=person-headshot src=http://via.placeholder.com/300x300 />
                 {.end}
 
-                <h3>{title}</h3>
-                <p>{excerpt}</p>
+                <span>
+                  <h3>{title}</h3>
+                  <p>{excerpt}</p>
+                </span>
+
               </li>
               {.end}
             </ul>
@@ -46,8 +49,11 @@
                 <img class=person-headshot src=http://via.placeholder.com/300x300 />
                 {.end}
 
-                <h3>{title}</h3>
-                <p>{excerpt}</p>
+                <span>
+                  <h3>{title}</h3>
+                  <p>{excerpt}</p>
+                </span>
+
               </li>
               {.end}
             </ul>

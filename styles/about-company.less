@@ -36,16 +36,32 @@
 
     li {
       width: 200px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
     }
   }
   .person-headshot {
     border-radius: 50%;
     width: 160px;
     height: 160px;
+    margin: 0 auto;
   }
-  @media (max-width: @smallScreenWidth) {
+  @media (max-width: @peopleCollectionsVerticalWidth) {
     .prx-about-company-nav  {
       display: none;
+    }
+    .prx-people-tiles li {
+      flex-direction: row;
+
+      span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h3, p {
+        margin: 0;
+      }
     }
   }
 }
