@@ -9,12 +9,15 @@
   .prx-about-company-nav {
     flex-grow: 1;
     min-width: 200px;
-    margin: 30px;
-    padding: 40px 0 0 0;
-    border-top: 6px solid @prxOrange;
 
-    display: flex;
-    flex-direction: column;
+    .fixed-nav-container {
+      margin: 30px;
+      position: fixed;
+      padding: 40px 0 0 0;
+      border-top: 6px solid @prxOrange;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .prx-about-company-nav a:last-child {
     padding-bottom: 40px;
