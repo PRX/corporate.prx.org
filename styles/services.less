@@ -1,7 +1,7 @@
 #prx-region-services {
   margin: 0 auto;
   max-width: 1105px;
-  padding: 50px 0 0 0;
+  padding: 50px 3em 0;
 
   h1 {
     font-size: 2.75em;
@@ -15,23 +15,40 @@
 
   nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 75px 0 0;
+    margin: 4em 0 0;
 
     a {
+      border-bottom: 3px solid @prxOrange;
+      color: black;
       display: block;
-      margin: 0 60px;
+      margin: 0 3.5em 20px;
       padding: 0 7px 5px;
       text-decoration: none;
       text-transform: uppercase;
-      color: black;
-      border-bottom: 3px solid @prxOrange;
     }
   }
 
+  @media (max-width: 500px) {
+    nav {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      a {
+        font-weight: bold;
+        margin-left: 0;
+      }
+    }
+  }
+
+
   section {
     border-bottom: 1px solid rgba(151, 151, 151, 0.3);
-    padding: 100px 0;
+    padding: 5em 0 4em;
 
     &:last-child {
       border: none;
