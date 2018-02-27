@@ -1,4 +1,10 @@
 <nav id=prx-main-nav>
+  <input type=checkbox id=prx-show-menu role=button>
+  <label for=prx-show-menu id=prx-main-nav-menu-button>
+    {#  <button >  }
+      <img src="/assets/hamburger.svg">
+    {#  </button>  }
+  </label>
   <ul>
     {.repeated section items}
       <li class="{.section active}active{.end}">
@@ -12,5 +18,4 @@
       </li>
     {.end}
   </ul>
-  <button id="prx-main-nav-menu-button">X</button>
 </nav>

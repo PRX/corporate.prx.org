@@ -1,6 +1,11 @@
 #prx-main-nav {
   background-color: @prxInverseFill;
   color: @prxInverseTextColor;
+  position: relative;
+
+  #prx-show-menu {
+    display: none;
+  }
 
   ul {
     border: 0;
@@ -58,12 +63,32 @@
 @media (max-width: 500px) {
   #prx-main-nav {
     ul {
+      // position: absolute;
       display: none;
+      flex-direction: column;
+      padding-bottom: 30px;
+
+      li {
+        a {
+          font-size: 1.8em;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    #prx-show-menu:checked ~ ul{
+      display: flex;
     }
   }
 
   #prx-main-nav-menu-button {
+    border: 0;
+    cursor: pointer;
     display: block;
+    outline: none;
+    padding: 10px;
   }
 }
 
