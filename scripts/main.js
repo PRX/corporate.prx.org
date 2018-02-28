@@ -8,11 +8,10 @@ function loadAllImages() {
 
 function affixCompanyNav(e) {
   var companyAboutNav = document.getElementsByClassName('fixed-nav-container')[0];
-  var scrollY = window.scrollY;
 
   if (companyAboutNav) {
-    if (scrollY > 100) {
-      // TODO this is a little jumpy
+    var scrollY = window.scrollY;
+    if (scrollY > 110) {
       companyAboutNav.className = 'fixed-nav-container no-scroll';
     } else {
       companyAboutNav.className = 'fixed-nav-container';
