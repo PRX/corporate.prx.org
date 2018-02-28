@@ -2,6 +2,20 @@
 
   <squarespace:navigation navigationId="companyNav" template="company-nav" />
 
+  {.equal?:collection.urlId:"company/inthenews"}
+    <squarespace:query collection=new-press-articles-collection columns=12 limit=6>
+      <ul>
+        {.repeated section items}
+        <li>
+          <p>{customContent.source}</p>
+          <a href="{customContent.sourceUrl}"><h3>{title}</h3></a>
+          <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
+        </li>
+        {.end}
+      </ul>
+    </squarespace:query>
+  {.end}
+
   {squarespace.main-content}
 
 </div>
