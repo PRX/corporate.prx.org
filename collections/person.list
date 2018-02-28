@@ -1,14 +1,1 @@
-<h1>person list!</h1> TODO remove this <-
-{.repeated section items}
-
-  <article class="prx-person">
-    <h1 class="name" data-content-field="firstLastName">
-      {firstLastName}
-    </h1>
-    <h1 class="name" data-content-field="identifyingInfo">
-      {identifyingInfo}
-    </h1>
-    <img src="{headshot}">
-  </article>
-
-{.end}
+<h1>here's a person!</h1>
