@@ -1,13 +1,34 @@
 #prx-region-company {
 
-  h2 {
-    font-size: 1.25em;
-    margin: auto;
-    margin-top: 40px;
-    max-width: 725px;
-  }
+  .company-main {
+    margin: 0 20px;
 
-  ul {
-    list-style: none;
+    h2 {
+      font-size: 1.25em;
+      margin: auto;
+      margin-top: 40px;
+      max-width: 725px;
+    }
+    h4 {
+      font-weight: normal;
+      border-bottom: 1px solid @prxGrey;
+    }
+
+    .prx-news-collection {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 30px;
+      }
+      p {
+        margin: 5px 0;
+      }
+      a > h3 {
+        font-weight: normal;
+        color: @prxTeal;
+        margin: 0;
+      }
+    }
   }
 }

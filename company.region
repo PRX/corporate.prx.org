@@ -2,20 +2,36 @@
 
   <squarespace:navigation navigationId="companyNav" template="company-nav" />
 
-  {.equal?:collection.urlId:"company/inthenews"}
-    <squarespace:query collection=new-press-articles-collection columns=12 limit=6>
-      <ul>
-        {.repeated section items}
-        <li>
-          <p>{customContent.source}</p>
-          <a href="{customContent.sourceUrl}"><h3>{title}</h3></a>
-          <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
-        </li>
-        {.end}
-      </ul>
-    </squarespace:query>
-  {.end}
+  <section class=company-main>
+    {squarespace.main-content}
 
-  {squarespace.main-content}
+    {.equal?:collection.urlId:"company/inthenews"}
+      <h4>Press Highlights</h4>
+      <squarespace:query collection=new-press-articles-collection columns=12 limit=6>
+        <ul class=prx-news-collection>
+          {.repeated section items}
+          <li>
+            <p>{customContent.source}</p>
+            <a href="{sourceUrl}"><h3>{title}</h3></a>
+            <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
+          </li>
+          {.end}
+        </ul>
+      </squarespace:query>
+
+      <h4>Most Recent Press</h4>
+      <squarespace:query collection=new-press-articles-collection columns=12 limit=6>
+        <ul class=prx-news-collection>
+          {.repeated section items}
+          <li>
+            <p>{customContent.source}</p>
+            <a href="{customContent.sourceUrl}"><h3>{title}</h3></a>
+            <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
+          </li>
+          {.end}
+        </ul>
+      </squarespace:query>
+    {.end}
+  </section>
 
 </div>
