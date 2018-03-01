@@ -1,5 +1,7 @@
 # Dev workflow
 Creating this site is a bit of a dance between setting up structure and custom data types / layouts locally, then adding in content through the CMS in order to actually see your changes appear. E.g.: for the Services tab, we decided to create a Services [Index Page](https://developers.squarespace.com/folders-indexes/) so that we could add multiple individual "pages" to the Services tab through the CMS. In order to do that, the steps were:
+
+
 *locally:*
   - create the services-index.conf file to determine allowed attributes of this index page
   - create the services-index.list file to determine how pages will be rendered onto the services index page
@@ -7,9 +9,11 @@ Creating this site is a bit of a dance between setting up structure and custom d
   - add the layout that you just created to [template.conf](https://developers.squarespace.com/template-configuration/) to include it in the configuration options for this site
   - note: at this point, you still won't be able to see any changes or do anything locally
   - `git push` all these changes to squarespace
+
+
 *in Squarespace UI:*
   - access the site editing UI via {siteUrl}/config and click the Pages link
-  - click the + icon. A menu will pop up with a heading that says "Create new page", and the page type options should now include Services Index. 
+  - click the + icon. A menu will pop up with a heading that says "Create new page", and the page type options should now include Services Index.
   - select Services Index, give your new Services Index Page a name (like "Services"!)
   - click the gear icon next to your Services index page, and under the Page Layout drop-down menu select "Services". Now, the layout on this index page will be the layout that you defined in services.region.
   - add subpages in to your Services Index page by clicking the "Add Section" link underneath your Services header. As you add new subpages, be sure to make these subpages use the Services layout (same step as above) as well. (the layout of a new page will always default to "Default" layout).
