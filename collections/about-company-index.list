@@ -37,6 +37,7 @@
                 {.end}
               </ul>
             </squarespace:query>
+            <a class="button" href="/staff-collection">See All</a>
           </div>
         {.end}
 
