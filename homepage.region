@@ -28,12 +28,5 @@
   </div>
 
 
-
-
-
-  <div role=main data-content-field=main-content id=prx-region-homepage class=prx-region-root>
-    {squarespace.main-content}
-  </div>
+  {squarespace.main-content}
 </div>
-
-
