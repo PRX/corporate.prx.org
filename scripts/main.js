@@ -19,6 +19,14 @@ function affixCompanyNav(e) {
   }
 }
 
+function activateCompanyLinkInNav(e) {
+  var onCompanyPages = !!window.location.href.match(/company/);
+  if (onCompanyPages) {
+    var companyLinkInNav = document.getElementsByClassName('ext-link')[0];
+    companyLinkInNav.className = 'ext-link active'
+  }
+}
+
 // The event subscription that loads images when the page is ready
 document.addEventListener('DOMContentLoaded', loadAllImages);
 
@@ -27,3 +35,6 @@ window.addEventListener('resize', loadAllImages);
 
 // On vertical scrolling, we want to fix the About-Company side navigation in place
 window.addEventListener('scroll', affixCompanyNav)
+
+// Rather hacky way to apply active link styling to Company link in main nav
+window.addEventListener('DOMContentLoaded', activateCompanyLinkInNav)

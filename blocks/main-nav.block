@@ -7,7 +7,8 @@
   </label>
   <ul>
     {.repeated section items}
-      <li class="{.section active}active{.end}">
+
+      <li class="{.section active}active {.end}{.section externalLink}ext-link{.end}">
         {.section collection}
           <a href="{fullUrl}">{navigationTitle}</a>
         {.end}
