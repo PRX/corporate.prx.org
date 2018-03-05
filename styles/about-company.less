@@ -1,8 +1,5 @@
 #prx-region-about-company {
-
-  h1 {
-    font-weight: normal;
-  }
+  font-family: 'Montserrat', sans-serif;
 
   .prx-about-company-main {
     max-width: 1105px;
@@ -57,7 +54,7 @@
     margin: auto;
     padding: 10px;
   }
-  .sqs-block-button-element, a.button {
+  .sqs-block-button-element, #prx-show-all-staff-button {
     background: @prxBlack;
     color: @prxInverseTextColor;
     text-transform: uppercase;
@@ -66,6 +63,24 @@
     letter-spacing: 2px;
     border-radius: 35px;
     width: 180px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  ul.expanded {
+    display: none;
+  }
+  #prx-show-all-staff {
+    display: none;
+  }
+  #prx-show-all-staff:checked {
+    ~ ul.expanded{
+      display: flex;
+    }
+
+    ~ #prx-show-all-staff-button {
+      display: none;
+    }
   }
 
   @media (max-width: @smallScreenWidth) {

@@ -37,7 +37,32 @@
                 {.end}
               </ul>
             </squarespace:query>
-            <a class="button" href="/staff-collection">See All</a>
+
+            <input type=checkbox id=prx-show-all-staff role=button>
+            <label for=prx-show-all-staff id=prx-show-all-staff-button>
+              See All
+            </label>
+              <squarespace:query collection=staff-collection columns=12 skip=6>
+
+                <ul class="expanded prx-people-tiles">
+                  {.repeated section items}
+                  <li>
+                    {.main-image?}
+                    <img class=person-headshot {@|image-meta} />
+                    {.or}
+                    <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                    {.end}
+
+                    <span>
+                      <h3>{title}</h3>
+                      <p>{excerpt}</p>
+                    </span>
+
+                  </li>
+                  {.end}
+                </ul>
+              </squarespace:query>
+            </a>
           </div>
         {.end}
 
