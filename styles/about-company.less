@@ -59,10 +59,13 @@
     width: 180px;
   }
 
-  @media (max-width: @peopleCollectionsVerticalWidth) {
+  @media (max-width: @smallScreenWidth) {
     .prx-about-company-nav  {
       display: none;
     }
+  }
+
+  @media (max-width: @peopleCollectionsVerticalWidth) {
     .prx-people-tiles li {
       flex-direction: row;
       width: 100%;
