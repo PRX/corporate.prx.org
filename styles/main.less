@@ -60,4 +60,23 @@ nav > ul {
   font-weight: bold;
   max-width: 1085px;
   text-transform: uppercase;
+
+  li {
+    font-weight: inherit;
+    opacity: 0.7;
+
+    &.active,
+    &:hover {
+      opacity: 1.0;
+    }
+
+    a {
+      color: inherit;
+      display: block;
+      font-weight: inherit;
+      margin: 5px 10px;
+      padding: 20px 20px;
+      text-decoration: none;
+    }
+  }
 }
