@@ -3,7 +3,7 @@
     <nav class=prx-about-company-nav>
       <div class=fixed-nav-container>
         {.repeated section @}
-          <a href="#{urlId}">{title}</a>
+          <a class="{urlId}" href="#{urlId}">{title}</a>
         {.end}
       </div>
     </nav>

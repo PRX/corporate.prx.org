@@ -17,23 +17,26 @@
     min-width: 200px;
 
     .fixed-nav-container {
-      width: 140px;
-      margin: 30px;
+      width: 150px;
+      margin: 25px;
       padding: 40px 0 0 0;
       border-top: 6px solid @prxOrange;
       display: flex;
       flex-direction: column;
     }
-
     .no-scroll {
       position: fixed;
       top: 0;
     }
+    a.active {
+      font-weight: bold;
+    }
+    a:last-child {
+      padding-bottom: 40px;
+      border-bottom: 1px solid @prxGrey;
+    }
   }
-  .prx-about-company-nav a:last-child {
-    padding-bottom: 40px;
-    border-bottom: 1px solid @prxGrey;
-  }
+
   .prx-about-company-content {
     flex-grow: 3;
     display: flex;
