@@ -48,6 +48,9 @@ a {
   }
 }
 
+
+// Shared rules for main-nav and company-nav
+
 nav > ul {
   margin: 0 auto;
   padding: 0;
@@ -77,6 +80,19 @@ nav > ul {
       margin: 5px 10px;
       padding: 20px 20px;
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  nav > ul {
+    font-size: 0.65em;
+
+    li {
+      a {
+        margin: 5px 5px;
+        padding: 20px 10px;
+      }
     }
   }
 }
