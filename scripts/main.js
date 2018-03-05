@@ -11,7 +11,7 @@ function affixCompanyNav(e) {
 
   if (companyAboutNav) {
     var scrollY = window.scrollY;
-    if (scrollY > 110) {
+    if (scrollY > 140) {
       companyAboutNav.className = 'fixed-nav-container no-scroll';
     } else {
       companyAboutNav.className = 'fixed-nav-container';
