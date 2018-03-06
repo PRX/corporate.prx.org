@@ -1,0 +1,4 @@
+<div role=main data-content-field=main-content id=prx-region-sponsorship class=prx-region-root>
+  <squarespace:block-field id=prx-sponsorship-header columns=12 label="Sponsorship Header" />
+  {squarespace.main-content}
+</div>
