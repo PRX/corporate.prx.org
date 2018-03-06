@@ -2,6 +2,15 @@
 - [Squarespace Developer documentation](https://developers.squarespace.com/quick-start)
 - Designs for site: on Google Drive
 
+# Develop locally
+- https://developers.squarespace.com/local-development/
+- go to live site at {siteUrl}. Navigate to Advanced settings and turn on Developer Mode.
+- then:
+```
+npm install -g @squarespace/server
+squarespace-server {siteUrl}
+```
+
 # Dev workflow
 Creating this site is a bit of a dance between setting up structure and custom data types / layouts locally, then adding in content through the CMS in order to actually see your changes appear. E.g.: for the Services tab, we decided to create a Services [Index Page](https://developers.squarespace.com/folders-indexes/) so that we could add multiple individual "pages" to the Services tab through the CMS. In order to do that, the steps were:
 
