@@ -29,6 +29,28 @@
 
 #prx-main-footer-social {
   grid-area: logo;
+
+  a {
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0.6;
+    width: 25px;
+    height: 25px;
+  }
+
+  a[href='https://twitter.com/prx'] {
+    background-image: url('/assets/twitter-white.svg');
+  }
+
+  a[href='https://www.facebook.com/PRXOfficial/'] {
+    background-image: url('/assets/facebook-white.svg');
+  }
+
+  a[href='https://medium.com/prxofficial'] {
+    background-image: url('/assets/medium-white.svg');
+  }
 }
 
 #prx-main-footer-legal {
@@ -36,6 +58,10 @@
   font-size: 0.675em;
   max-width: 250px;
   opacity: 0.7;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: @smallScreenWidth) {
