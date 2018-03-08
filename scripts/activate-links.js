@@ -18,8 +18,12 @@ function isElementInViewport (el) {
     );
 }
 
-function affixNav(sideNav) {
-  if (window.scrollY > 140) {
+function affixNavPosition(sideNav) {
+  var mainNav = document.getElementById('prx-main-nav');
+  var companyNav = document.getElementById('prx-company-nav');
+  var maxAllowedScroll = mainNav.offsetHeight + companyNav.offsetHeight;
+
+  if (window.scrollY > maxAllowedScroll) {
     sideNav.className = 'fixed-nav-container no-scroll';
   } else {
     sideNav.className = 'fixed-nav-container';
@@ -32,11 +36,11 @@ function removeActiveClassFromAll(elements) {
   }
 }
 
-function affixAndStyleAboutCompanyNav(e) {
+function styleCompanyAboutNav(e) {
   var onCompanyAbout = !!window.location.href.match(/company\/about/);
   if (onCompanyAbout) {
     var companyAboutNav = document.getElementsByClassName('fixed-nav-container')[0];
-    affixNav(companyAboutNav)
+    affixNavPosition(companyAboutNav)
 
     var contentLinks = companyAboutNav.children;
     removeActiveClassFromAll(contentLinks);
@@ -74,4 +78,4 @@ try {
 }
 
 window.addEventListener('DOMContentLoaded', activateCompanyLinkInMainNav, passiveSupported ? { passive: true } : false);
-window.addEventListener('scroll', affixAndStyleAboutCompanyNav, passiveSupported ? { passive: true } : false);
+window.addEventListener('scroll', styleCompanyAboutNav, passiveSupported ? { passive: true } : false);
