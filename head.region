@@ -16,6 +16,7 @@
     <title>PRX</title>
 
     <squarespace:script src="main.js" combo="false" />
+    <squarespace:script src="activate-links.js" combo="false" />
 
     {squarespace-headers}
   </head>
