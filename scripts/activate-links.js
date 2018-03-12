@@ -5,7 +5,8 @@ function activateCompanyLinkInMainNav(e) {
   var onCompanyPages = !!window.location.href.match(/company/);
   if (onCompanyPages) {
     var companyLinkInNav = document.getElementsByClassName('ext-link')[0];
-    companyLinkInNav.className = 'ext-link active'
+    companyLinkInNav.className = 'ext-link active';
+    styleCompanyAboutNav();
   }
 }
 
