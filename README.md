@@ -3,9 +3,10 @@
 - Designs for site: on Google Drive
 
 # Develop locally
-- https://developers.squarespace.com/local-development/
-- go to live site at {siteUrl}. Navigate to Advanced settings and turn on Developer Mode.
-- then:
+- Go to the live site at {siteUrl}/config. Navigate to Advanced settings and turn on Developer Mode.
+- Follow [these](https://developers.squarespace.com/using-git) instructions to clone the Squarespace repository and add this GH repository as another remote destination.
+- Then follow [these](https://developers.squarespace.com/local-development/) instructions to get the dev server up and running:
+-
 ```
 npm install -g @squarespace/server
 squarespace-server {siteUrl}
