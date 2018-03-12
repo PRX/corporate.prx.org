@@ -49,6 +49,7 @@
       {.end}
     </ul>
   </squarespace:query>
+  <hr>
 
 
   {squarespace.main-content}
