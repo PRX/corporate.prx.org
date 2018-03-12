@@ -19,17 +19,22 @@
     display: flex;
     flex-wrap: wrap;
     font-family: "Montserrat";
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 4em 0 0;
 
     a {
       border-bottom: 3px solid @prxOrange;
       color: black;
       display: block;
-      margin: 0 3.5em 20px;
+      margin: 0 0 20px;
       padding: 0 7px 5px;
       text-decoration: none;
       text-transform: uppercase;
+
+      &:hover {
+        border-bottom-width: 6px;
+        padding-bottom: 2px
+      }
     }
   }
 
