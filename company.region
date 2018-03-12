@@ -4,6 +4,10 @@
   <squarespace:navigation navigationId="companyNav" template="company-nav" />
 
   <section class=company-main>
+    {.equal?:collection.urlId:"company/partners"}
+      <squarespace:block-field id=prx-partners-header columns=12 label="Partners Intro Header" />
+    {.end}
+
     {squarespace.main-content}
 
     {.equal?:collection.urlId:"company/inthenews"}
