@@ -23,9 +23,10 @@
     </ul>
   </squarespace:query>
 
-  <section>
-    <h1>Radiotopia</h1>
-    <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
+  <section id=prx-shows-radiotopia>
+    <div>
+      <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
+    </div>
   </section>
 
   <squarespace:query collection=shows-collection columns=12 skip=0>
