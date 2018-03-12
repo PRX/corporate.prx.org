@@ -46,6 +46,39 @@ a {
     font-size: 1.25em;
     font-weight: bold;
   }
+
+  .sqs-block-button {
+    a.sqs-block-button-element--medium {
+      background: @prxBlack;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      color: @prxInverseTextColor;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      padding: 15px 35px;
+
+      &:hover {
+        background: white;
+        border: 2px solid @prxBlack;
+        color: @prxBlack;
+      }
+    }
+  }
+
+  .watermarked {
+    .sqs-block-button {
+      a.sqs-block-button-element--medium {
+        background: white;
+        color: @prxBlack;
+
+        &:hover {
+          background: @prxBlack;
+          border: 2px solid transparent;
+          color: @prxInverseTextColor;
+        }
+      }
+    }
+  }
 }
 
 
