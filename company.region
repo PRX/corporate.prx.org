@@ -1,4 +1,5 @@
 <div role=main data-content-field=main-content id=prx-region-company class=prx-region-root>
+  <squarespace:script src="activate-links.js" combo="false" />
 
   <squarespace:navigation navigationId="companyNav" template="company-nav" />
 
