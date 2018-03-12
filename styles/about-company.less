@@ -49,23 +49,26 @@
     padding-top: 15px;
   }
 
-  a.button {
-    display: block;
+  #prx-show-all-staff-button {
+    border: 2px solid transparent;
     margin: auto;
-    padding: 10px;
-  }
-  .sqs-block-button-element, #prx-show-all-staff-button {
-    background: @prxBlack;
-    color: @prxInverseTextColor;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 100;
-    letter-spacing: 2px;
-    border-radius: 35px;
     width: 180px;
     display: block;
-    margin: 0 auto;
-    padding: 10px;
+    background: @prxBlack;
+    color: @prxInverseTextColor;
+    border-radius: 999px;
+    padding: 15px 35px;
+    font: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      border: 2px solid @prxBlack;
+      color: @prxBlack;
+    }
   }
   ul.expanded {
     display: none;
