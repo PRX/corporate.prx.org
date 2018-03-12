@@ -1,6 +1,8 @@
 <div id=prx-region-technology class=prx-region-root>
   <squarespace:block-field id=prx-technology-content-header columns=12 label="Content Header" />
 
+  <squarespace:block-field id=prx-technology-clients columns=12 label="Clients" />
+
   <section role=main data-content-field=main-content class=case-study>
     <div>
       {squarespace.main-content}
