@@ -16,9 +16,9 @@
         <ul class=prx-news-collection>
           {.repeated section items}
           <li>
-            <p>{customContent.source}</p>
+            <p class=prx-news-source>{customContent.source}</p>
             <a href="{sourceUrl}"><h3>{title}</h3></a>
-            <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
+            <p class=prx-news-details>By {customContent.author} &#8226; {customContent.pubDate}</p>
           </li>
           {.end}
         </ul>
@@ -29,9 +29,9 @@
         <ul class=prx-news-collection>
           {.repeated section items}
           <li>
-            <p>{customContent.source}</p>
-            <a href="{customContent.sourceUrl}"><h3>{title}</h3></a>
-            <p>By {customContent.author} &#8226; {customContent.pubDate}</p>
+            <p class=prx-news-source>{customContent.source}</p>
+            <a href="{sourceUrl}"><h3>{title}</h3></a>
+            <p class=prx-news-details>By {customContent.author} &#8226; {customContent.pubDate}</p>
           </li>
           {.end}
         </ul>
