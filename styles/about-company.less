@@ -9,8 +9,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
   .prx-about-company-nav {
-    flex-grow: 1;
+    flex: 0 1 30%;
     min-width: 200px;
 
     .fixed-nav-container {
@@ -35,7 +36,7 @@
   }
 
   .prx-about-company-content {
-    flex-grow: 3;
+    flex: 0 1 70%;
     display: flex;
     flex-direction: column;
   }
@@ -89,6 +90,9 @@
   @media (max-width: @smallScreenWidth) {
     .prx-about-company-nav  {
       display: none;
+    }
+    .prx-about-company-content {
+      flex: 0 1 100%;
     }
     .prx-about-company-main  {
       padding: 0;
