@@ -22,7 +22,7 @@ function isElementInViewport (el) {
 function affixNavPosition(sideNav) {
   var mainNav = document.getElementById('prx-main-nav');
   var companyNav = document.getElementById('prx-company-nav');
-  var maxAllowedScroll = mainNav.offsetHeight + companyNav.offsetHeight;
+  var maxAllowedScroll = mainNav.offsetHeight + companyNav.offsetHeight + 30; // 30px of padding-top on page
 
   if (window.scrollY > maxAllowedScroll) {
     sideNav.className = 'fixed-nav-container no-scroll';
