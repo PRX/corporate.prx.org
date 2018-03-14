@@ -6,7 +6,24 @@
     color: @prxBlack;
   }
 
-  @media (max-width: @smallScreenWidth) {
-    display: none;
+  @media (max-width: @navBarsCollapseWidth) {
+    ul {
+      flex-direction: column;
+      background-color: @prxInverseFill;
+      color: @prxInverseTextColor;
+      padding-bottom: 30px;
+      margin-top: -5px;
+
+      li {
+        a {
+          font-weight: normal;
+          font-size: 1.5em;
+          padding: 5px 0 5px 40px;
+        }
+      }
+    }
+    li.active-link {
+      color: @prxInverseTextColor;
+    }
   }
 }
