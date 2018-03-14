@@ -44,9 +44,22 @@
   }
 }
 
-.prx-home #prx-main-nav {
+.prx-home  {
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100vw;
+
+  #prx-main-nav {
+    background-color: transparent;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+  }
+
+  ~ div.company-nav.revealed {
+    width: 100vw;
+    position: absolute;
+    top: 30em;
+    #prx-company-nav, #prx-company-nav > ul {
+      background-color: transparent;
+    }
+  }
 }
