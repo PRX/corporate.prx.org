@@ -25,6 +25,6 @@
     <div class="{.equal?:collection.urlId:"home"}prx-home{.end}">
       <squarespace:navigation navigationId="mainNav" template="main-nav" />
     </div>
-    <div class="{collection.regionName}-company-nav">
+    <div class="{collection.regionName} company-nav">
       <squarespace:navigation navigationId="companyNav" template="company-nav" />
     </div>
