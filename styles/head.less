@@ -3,7 +3,7 @@
 
   &.about-company, &.company {
     display: block;
-    @media (max-width: @smallScreenWidth) {
+    @media (max-width: @navBarsCollapseWidth) {
       display: none;
     }
   }
@@ -14,7 +14,7 @@
 }
 
 @media (min-width: @navBarsCollapseWidth) {
-  .company-nav {
+  .company-nav.revealed {
     display: none !important;
   }
 }
