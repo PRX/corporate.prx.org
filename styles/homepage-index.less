@@ -129,17 +129,20 @@
       display: none;
     }
     section {
-      background-size: 100% auto; // we've added a background-image in main.js
+      // we've added a background-image in main.js
+      background-size: auto 100%;
+      background-position: top center;
     }
     .main-content {
       text-align: center;
       color: @prxInverseTextColor;
+      padding: 8em 2em;
 
       a.sqs-block-button-element {
         margin: 0 auto;
         text-align: center;
         display: block;
-        width: 50%;
+        max-width: 50%;
         min-width: 100px;
       }
       hr {
