@@ -124,6 +124,26 @@
       margin: 0;
     }
   }
+  @media (max-width: @smallScreenWidth) {
+    .section-bg-image {
+      display: none;
+    }
+    section {
+      background-size: 100% auto; // we've added a background-image in main.js
+    }
+    .main-content {
+      text-align: center;
+      a.sqs-block-button-element {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50%;
+        min-width: 100px;
+      }
+      hr {
+        margin: auto;
+      }
+    }
+  }
+
 }
-
-
