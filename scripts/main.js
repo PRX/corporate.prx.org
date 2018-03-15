@@ -4,6 +4,7 @@ function loadAllImages() {
   for (var i = 0; i < images.length; i++) {
     ImageLoader.load(images[i], { load: true });
   }
+  window.setTimeout(redoHomepageImages, 0);
 }
 
 function addHamburgerClickListener(e) {
