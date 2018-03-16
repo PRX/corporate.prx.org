@@ -24,12 +24,18 @@ function showCompanyNav() {
 }
 
 function redoHomepageImages() {
+  if (!document.getElementById('prx-homepage-index-list')) {
+    return;
+  }
   var homepageSections = document.getElementById('prx-homepage-index-list').children;
   if (homepageSections.length) {
     for (let i = 0; i < homepageSections.length; i++) {
       var section = homepageSections[i];
       var img = section.getElementsByClassName("thumb-image loaded")[0];
-      if (img && window.innerWidth < 640) { // 640 == @smallScreenWidth from style vars
+      if (!img) {
+        return;
+      }
+      if (window.innerWidth < 640) { // 640 == @smallScreenWidth from style vars
         section.style.backgroundImage = `url(${img.src})`;
         img.style.display = "none"
       } else {
