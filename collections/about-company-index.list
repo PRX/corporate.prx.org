@@ -1,50 +1,26 @@
-{.section collection}
-  {.section collections}
-    <nav class=prx-about-company-nav>
-      <div class=fixed-nav-container>
-        {.repeated section @}
-          <a class="{urlId}" href="#{urlId}">{title}</a>
-        {.end}
-      </div>
-    </nav>
-  {.end}
+<div id=prx-index-about>
+  {.section collection}
+    {.section collections}
+      <nav class=prx-about-nav>
+        <div class=fixed-nav-container>
+          {.repeated section @}
+            <a class="{urlId}" href="#{urlId}">{title}</a>
+          {.end}
+        </div>
+      </nav>
+    {.end}
 
-  <section class=prx-about-company-content>
-    {.repeated section collections}
-      <section class=prx-about-company-content-subpage id="{urlId}">
+    <div class=prx-about-content>
+      {.repeated section collections}
+        <section class=prx-about-company-content-subpage id="{urlId}">
 
-        {mainContent}
+          {mainContent}
 
-        {.equal?:urlId:"staff"}
-          <div>
-            <squarespace:query collection=staff-collection columns=12 limit=6>
+          {.equal?:urlId:"staff"}
+            <div>
+              <squarespace:query collection=staff-collection columns=12 limit=6>
 
-              <ul class=prx-people-tiles>
-                {.repeated section items}
-                <li>
-                  {.main-image?}
-                  <img class=person-headshot {@|image-meta} />
-                  {.or}
-                  <img class=person-headshot src=http://via.placeholder.com/300x300 />
-                  {.end}
-
-                  <span>
-                    <h3>{title}</h3>
-                    <p>{excerpt}</p>
-                  </span>
-
-                </li>
-                {.end}
-              </ul>
-            </squarespace:query>
-
-            <input type=checkbox id=prx-show-all-staff role=button>
-            <label for=prx-show-all-staff id=prx-show-all-staff-button>
-              See All
-            </label>
-              <squarespace:query collection=staff-collection columns=12 skip=6>
-
-                <ul class="expanded prx-people-tiles">
+                <ul class=prx-people-tiles>
                   {.repeated section items}
                   <li>
                     {.main-image?}
@@ -62,37 +38,63 @@
                   {.end}
                 </ul>
               </squarespace:query>
-            </a>
-          </div>
-        {.end}
 
-        {.equal?:urlId:"board-members"}
-          <div>
-            <squarespace:query collection=board-collection columns=12 limit=6>
+              <input type=checkbox id=prx-show-all-staff role=button>
+              <label for=prx-show-all-staff id=prx-show-all-staff-button>
+                See All
+              </label>
+                <squarespace:query collection=staff-collection columns=12 skip=6>
 
-              <ul class=prx-people-tiles>
-                {.repeated section items}
-                <li>
-                  {.main-image?}
-                  <img class=person-headshot {@|image-meta} />
-                  {.or}
-                  <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                  <ul class="expanded prx-people-tiles">
+                    {.repeated section items}
+                    <li>
+                      {.main-image?}
+                      <img class=person-headshot {@|image-meta} />
+                      {.or}
+                      <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                      {.end}
+
+                      <span>
+                        <h3>{title}</h3>
+                        <p>{excerpt}</p>
+                      </span>
+
+                    </li>
+                    {.end}
+                  </ul>
+                </squarespace:query>
+              </a>
+            </div>
+          {.end}
+
+          {.equal?:urlId:"board-members"}
+            <div>
+              <squarespace:query collection=board-collection columns=12 limit=15>
+
+                <ul class=prx-people-tiles>
+                  {.repeated section items}
+                  <li>
+                    {.main-image?}
+                    <img class=person-headshot {@|image-meta} />
+                    {.or}
+                    <img class=person-headshot src=http://via.placeholder.com/300x300 />
+                    {.end}
+
+                    <span>
+                      <h3>{title}</h3>
+                      <p>{excerpt}</p>
+                    </span>
+
+                  </li>
                   {.end}
+                </ul>
+              </squarespace:query>
+            </div>
+          {.end}
 
-                  <span>
-                    <h3>{title}</h3>
-                    <p>{excerpt}</p>
-                  </span>
+        </section>
 
-                </li>
-                {.end}
-              </ul>
-            </squarespace:query>
-          </div>
-        {.end}
-
-      </section>
-
-    {.end}
-  </section>
-{.end}
+      {.end}
+    </div>
+  {.end}
+</div>

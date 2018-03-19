@@ -7,22 +7,6 @@ function loadAllImages() {
   window.setTimeout(redoHomepageImages, 0);
 }
 
-function addHamburgerClickListener(e) {
-  document.getElementById("prx-main-nav-menu-button").addEventListener("click", function(){
-    showCompanyNav();
-  });
-}
-
-function showCompanyNav() {
-  var currentlyCheckingShowMenu = document.getElementById("prx-show-menu").checked === false;
-  var companyNavParentEl = document.getElementById("prx-company-nav").parentElement;
-  if (currentlyCheckingShowMenu) {
-    companyNavParentEl.className = companyNavParentEl.className + " revealed";
-  } else {
-    companyNavParentEl.className = companyNavParentEl.className.replace(/revealed/, '');
-  }
-}
-
 function redoHomepageImages() {
   if (!document.getElementById('prx-homepage-index-list')) {
     return;
@@ -54,6 +38,3 @@ document.addEventListener('DOMContentLoaded', loadAllImages);
 // The event subscription that reloads images on resize
 window.addEventListener('resize', loadAllImages);
 window.addEventListener('resize', redoHomepageImages);
-
-// add click listener for hamburger menu button
-document.addEventListener('DOMContentLoaded', addHamburgerClickListener);

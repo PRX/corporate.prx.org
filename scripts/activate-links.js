@@ -11,18 +11,17 @@ function activateCompanyLinkInMainNav(e) {
 }
 
 function isElementInViewport (el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
 function affixNavPosition(sideNav) {
-  var mainNav = document.getElementById('prx-main-nav');
-  var companyNav = document.getElementById('prx-company-nav');
-  var maxAllowedScroll = mainNav.offsetHeight + companyNav.offsetHeight + 30; // 30px of padding-top on page
+  var nav = document.getElementById('prx-nav-group');
+  var maxAllowedScroll = nav.offsetHeight + 30; // 30px of padding-top on page
 
   if (window.scrollY > maxAllowedScroll) {
     sideNav.className = 'fixed-nav-container no-scroll';
@@ -66,14 +65,14 @@ function styleCompanyAboutNav(e) {
 var passiveSupported = false;
 
 try {
-  var options = Object.defineProperty({}, "passive", {
+  var options = Object.defineProperty({}, 'passive', {
     get: function() {
       passiveSupported = true;
     }
   });
 
-  window.addEventListener("test", options, options);
-  window.removeEventListener("test", options, options);
+  window.addEventListener('test', options, options);
+  window.removeEventListener('test', options, options);
 } catch(err) {
   passiveSupported = false;
 }

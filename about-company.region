@@ -1,8 +1,0 @@
-<div role=main data-content-field=main-content id=prx-region-about-company class=prx-region-root>
-  <squarespace:script src="activate-links.js" combo="false" />
-
-  <section class=prx-about-company-main>
-    {squarespace.main-content}
-  </section>
-
-</div>

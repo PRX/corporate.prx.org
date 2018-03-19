@@ -1,0 +1,12 @@
+<div id=prx-nav-group>
+  {# Hamburger button; for mobile }
+  <label for=prx-menu-toggle id=prx-nav-toggle-button>
+    <img src="/assets/hamburger.svg">
+  </label>
+  <input type=checkbox id=prx-menu-toggle class=prx-toggle role=button>
+
+  <div class=prx-toggle-target>
+    <squarespace:navigation navigationId=mainNav template=main-nav />
+    <squarespace:navigation navigationId=companyNav template=company-nav />
+  </div>
+</div>

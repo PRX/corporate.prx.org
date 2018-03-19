@@ -28,6 +28,10 @@ a {
   color: inherit;
 }
 
+.prx-toggle { display: none; }
+.prx-toggle-target { display: none; }
+.prx-toggle:checked ~ .prx-toggle-target { display: block; }
+
 .prx-region-root {
   h1 {
     font-size: 2.35em;
@@ -82,52 +86,15 @@ a {
   }
 }
 
+// @media (max-width: 1000px) {
+//   nav > ul {
+//     font-size: 0.65em;
 
-// Shared rules for main-nav and company-nav
-
-nav > ul {
-  border: 0;
-  display: flex;
-  flex-direction: row;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85em;
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 1px;
-  margin: 0 auto;
-  max-width: 1085px;
-  padding: 0;
-  text-transform: uppercase;
-
-  li {
-    font-weight: inherit;
-    opacity: 0.7;
-
-    &.active,
-    &:hover {
-      opacity: 1.0;
-    }
-
-    a {
-      color: inherit;
-      display: block;
-      font-weight: inherit;
-      margin: 5px 10px;
-      padding: 20px 20px;
-      text-decoration: none;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  nav > ul {
-    font-size: 0.65em;
-
-    li {
-      a {
-        margin: 5px 5px;
-        padding: 20px 10px;
-      }
-    }
-  }
-}
+//     li {
+//       a {
+//         margin: 5px 5px;
+//         padding: 20px 10px;
+//       }
+//     }
+//   }
+// }

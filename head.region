@@ -15,16 +15,13 @@
 
     <title>PRX</title>
 
-    <squarespace:script src="main.js" combo="false" />
+    <squarespace:script src=main.js combo=false />
+    <squarespace:script src=activate-links.js combo=false />
 
     {squarespace-headers}
   </head>
   <body class="{squarespace.page-classes}" id="{squarespace.page-id}">
-    {@|apply google-tag-manager-noscript.block}
+    <div id=prx-body-wrap class="{.equal?:collection.urlId:"home"}prx-home{.end}">
+      {@|apply google-tag-manager-noscript.block}
 
-    <div class="{.equal?:collection.urlId:"home"}prx-home{.end}">
-      <squarespace:navigation navigationId="mainNav" template="main-nav" />
-    </div>
-    <div class="{collection.regionName} company-nav">
-      <squarespace:navigation navigationId="companyNav" template="company-nav" />
-    </div>
+      {@|apply nav-group.block}

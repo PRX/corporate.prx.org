@@ -2,29 +2,66 @@
   background-color: @companyNavBackgroundColor;
   color: @companyNavTextColor;
 
-  li.active-link {
-    color: @prxBlack;
+  // Default (desktop) styles
+  ul {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    font-weight: bold;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    max-width: 885px;
+    padding: 0;
+    text-transform: uppercase;
+
+    li {
+      font-weight: inherit;
+      opacity: 0.7;
+
+      &.active,
+      &:hover {
+        opacity: 1.0;
+      }
+
+      &.active-link {
+        color: @prxBlack;
+      }
+
+      a {
+        color: inherit;
+        display: block;
+        font-weight: inherit;
+        margin: 5px 10px;
+        padding: 20px 5px;
+        text-decoration: none;
+      }
+    }
   }
 
+  // Mobile styles (menu mode); won't apply to the Company page nav, which is
+  // not visible on mobile
   @media (max-width: @navBarsCollapseWidth) {
     ul {
       flex-direction: column;
       background-color: @prxInverseFill;
       color: @prxInverseTextColor;
-      padding-bottom: 30px;
-      margin-top: -5px;
+      font-size: 1em;
+      font-weight: normal;
+      padding-bottom: 8em;
 
       li {
+        &.active-link {
+          color: @prxInverseTextColor;
+          opacity: 1.0;
+        }
+
         a {
-          font-weight: normal;
-          font-size: 1.5em;
           padding: 5px 0 5px 40px;
         }
       }
-    }
-    li.active-link {
-      color: @prxInverseTextColor;
-      opacity: 1.0;
     }
   }
 }

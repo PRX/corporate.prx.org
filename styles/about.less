@@ -1,18 +1,21 @@
-#prx-region-about-company {
+#prx-index-about {
   font-family: 'Montserrat', sans-serif;
+  max-width: 1105px;
+  margin: 0 auto;
+  padding: 30px 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   .prx-about-company-main {
-    max-width: 1105px;
-    margin: 0 auto;
-    padding: 30px 3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
   }
 
-  .prx-about-company-nav {
+  .prx-about-nav {
     flex: 0 1 30%;
     min-width: 200px;
+
+    @media (max-width: @smallScreenWidth) { display: none; }
 
     .fixed-nav-container {
       width: 160px;
@@ -22,20 +25,23 @@
       display: flex;
       flex-direction: column;
     }
+
     .no-scroll {
       position: fixed;
       top: 0;
     }
+
     a.active {
       font-weight: bold;
     }
+
     a:last-child {
       padding-bottom: 40px;
       border-bottom: 1px solid @prxGrey;
     }
   }
 
-  .prx-about-company-content {
+  .prx-about-content {
     flex: 0 1 70%;
     display: flex;
     flex-direction: column;
@@ -88,9 +94,7 @@
   }
 
   @media (max-width: @smallScreenWidth) {
-    .prx-about-company-nav  {
-      display: none;
-    }
+
     .prx-about-company-content {
       flex: 0 1 100%;
     }

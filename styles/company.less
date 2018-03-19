@@ -1,6 +1,12 @@
 #prx-region-company {
   font-family: 'Montserrat', sans-serif;
 
+  // For mobile the company nav on the Company page is hidden; there is another
+  // company nav in the mobile menu nav
+  @media (max-width: @navBarsCollapseWidth) {
+    #prx-company-nav { display: none; }
+  }
+
   .company-main {
     max-width: 1105px;
     margin: 0 auto;

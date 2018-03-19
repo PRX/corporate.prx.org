@@ -1,0 +1,28 @@
+#prx-nav-group {
+  // By default the company nav is hidden; we only show it on mobile
+  // (The company nav that appears on the Company page is another instance of
+  // nav block, and has its own styles)
+  #prx-company-nav { display: none; }
+
+  @media (min-width: @navBarsCollapseWidth) {
+    .prx-toggle-target { display: block; }
+  }
+
+  @media (max-width: @navBarsCollapseWidth) {
+    background: @prxBlack;
+
+    #prx-company-nav { display: block; }
+  }
+}
+
+#prx-nav-toggle-button {
+  border: 0;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  padding: 10px;
+
+  @media (max-width: @navBarsCollapseWidth) {
+    display: block;
+  }
+}
