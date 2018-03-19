@@ -1,5 +1,9 @@
-{.section collection}
-  {.repeated section collections}
-    <section>{mainContent}</section>
+<div id=prx-index-list-technology class=prx-index-list>
+  {.section collection}
+    {.repeated section collections}
+      <section class=prx-index-list-section>
+        {mainContent}
+      </section>
+    {.end}
   {.end}
-{.end}
+</div>

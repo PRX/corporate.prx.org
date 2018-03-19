@@ -1,7 +1,7 @@
-<div id=prx-homepage-index-list>
+<div id=pr-index-list-homepage class=prx-index-list>
   {.section collection}
     {.repeated section collections}
-      <section class="{.main-image?}watermarked{.end}">
+      <section class="prx-index-list-section {.main-image?}watermarked{.end}">
         <img {mainImage|image-meta} data-load=false class=section-bg-image />
         <div data-content-field=main-content class=main-content>
           {mainContent}

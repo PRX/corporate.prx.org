@@ -1,13 +1,17 @@
-{.section collection}
-  {.section collections}
-    <nav>
-      {.repeated section @}
-        <a href="#{urlId}">{title}</a>
-      {.end}
-    </nav>
-  {.end}
+<div id=prx-index-list-services class=prx-index-list>
+  {.section collection}
+    {.section collections}
+      <nav>
+        {.repeated section @}
+          <a href="#{urlId}">{title}</a>
+        {.end}
+      </nav>
+    {.end}
 
-  {.repeated section collections}
-    <section id="{urlId}">{mainContent}</section>
+    {.repeated section collections}
+      <section id="{urlId}" class=prx-index-list-section>
+        {mainContent}
+      </section>
+    {.end}
   {.end}
-{.end}
+</div>
