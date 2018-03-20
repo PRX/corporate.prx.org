@@ -143,6 +143,8 @@
   list-style: none;
   padding: 0;
 
+  @media (max-width: @smallScreenWidth) { padding: 0 3em; }
+
   &.prx-toggle-target { display: none; }
   .prx-toggle:checked ~ &.prx-toggle-target { display: flex; }
 
