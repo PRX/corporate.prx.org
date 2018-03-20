@@ -32,7 +32,28 @@ a {
 .prx-toggle-target { display: none; }
 .prx-toggle:checked ~ .prx-toggle-target { display: block; }
 
+// Some divs, like the region root and index sections, can have a backdrop image
+div.prx-backdrop {
+  color: white;
+
+  .sqs-block-button {
+    a.sqs-block-button-element--medium {
+      background: white;
+      color: @prxBlack;
+
+      &:hover {
+        background: @prxBlack;
+        border: 2px solid transparent;
+        color: @prxInverseTextColor;
+      }
+    }
+  }
+}
+
 .prx-region-root {
+  position: relative;
+  overflow: hidden;
+
   h1 {
     font-size: 2.35em;
     font-weight: bold;
@@ -49,6 +70,42 @@ a {
   h3 {
     font-size: 1.25em;
     font-weight: bold;
+  }
+
+  // Banner/thumbnail images rendered as backgrounds of content areas
+  img.prx-backdrop {
+    position: absolute;
+    width: 100vw;
+
+    @media (max-width: @smallScreenWidth) {
+      height: 100%;
+      width: auto;
+      min-width: @smallScreenWidth;
+    }
+  }
+
+  // Standard stacked index page layout
+  .prx-index-list {
+    overflow: hidden;
+    position: relative;
+
+    .prx-index-list-section {
+      overflow: hidden;
+      position: relative;
+
+      > section {
+        padding: 0 3em;
+
+        @media (max-width: @smallScreenWidth) { padding: 0; }
+      }
+
+      div[data-type='page'] {
+        margin: 0 auto;
+        max-width: 1105px;
+
+        @media (max-width: @smallScreenWidth) { padding: 0 3em; }
+      }
+    }
   }
 
   .sqs-block-button {
@@ -69,32 +126,4 @@ a {
       }
     }
   }
-
-  .watermarked {
-    .sqs-block-button {
-      a.sqs-block-button-element--medium {
-        background: white;
-        color: @prxBlack;
-
-        &:hover {
-          background: @prxBlack;
-          border: 2px solid transparent;
-          color: @prxInverseTextColor;
-        }
-      }
-    }
-  }
 }
-
-// @media (max-width: 1000px) {
-//   nav > ul {
-//     font-size: 0.65em;
-
-//     li {
-//       a {
-//         margin: 5px 5px;
-//         padding: 20px 10px;
-//       }
-//     }
-//   }
-// }

@@ -1,12 +1,11 @@
-<div id=prx-index-list-sponsorship class=prx-index-list>
-  {.section collection}
+{.section collection}
+  <div id=prx-index-list-sponsorship class=prx-index-list>
     {.repeated section collections}
-      <section class="prx-index-list-section {.main-image?}watermarked{.end}">
-        <img {mainImage|image-meta} data-load=false class=section-bg-image />
-        <div data-content-field=main-content class=main-content>
-          {mainContent}
-        </div>
-      </section>
+      <div id="{urlId}" class="prx-index-list-section {.section mainImage}prx-backdrop{.end}">
+        {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
+
+        <section data-content-field=main-content>{mainContent}</section>
+      </div>
     {.end}
-  {.end}
-</div>
+  </div>
+{.end}

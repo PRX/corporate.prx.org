@@ -1,4 +1,9 @@
-<div role=main data-content-field=main-content id=prx-region-services class=prx-region-root>
-  <squarespace:block-field id=prx-services-header columns=12 label="Services Header" />
-  {squarespace.main-content}
-</div>
+{.section collection}
+  <div id=prx-region-services class="prx-region-root {.section mainImage}prx-backdrop{.end}">
+    {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
+
+    <squarespace:block-field id=prx-services-header columns=12 label="Services Header" />
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+    <squarespace:block-field id=prx-services-footer columns=12 label="Services Footer" />
+  </div>
+{.end}

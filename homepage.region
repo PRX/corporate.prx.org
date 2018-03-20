@@ -1,32 +1,34 @@
-<div role=main data-content-field=main-content id=prx-region-homepage class=prx-region-root>
-  <div style="background: #2c2c2c; min-height: 780px;"></div>
+{.section collection}
+  <div role=main data-content-field=main-content id=prx-region-homepage class=prx-region-root>
+    <div style="background: #2c2c2c; min-height: 780px;"></div>
 
-  <squarespace:block-field id=prx-homepage-content-header columns=12 label="Content Header" />
+    <squarespace:block-field id=prx-homepage-content-header columns=12 label="Content Header" />
 
-  <div id=carwrap>
-    <squarespace:query collection=shows-collection columns=12>
-      <ul class=prx-show-tiles>
-        {.repeated section items}
-          <li class="{.if customContent.artworkBorder}artwork-border{.end}">
-            <a href="{sourceUrl}">
-              {.main-image?}
-                <img class=show-artwork {@|image-meta} />
-              {.or}
-                <img class=show-artwork src=http://via.placeholder.com/300x300>
-              {.end}
+    <div id=carwrap>
+      <squarespace:query collection=shows-collection columns=12>
+        <ul class=prx-show-tiles>
+          {.repeated section items}
+            <li class="{.if customContent.artworkBorder}artwork-border{.end}">
+              <a href="{sourceUrl}">
+                {.main-image?}
+                  <img class=show-artwork {@|image-meta} />
+                {.or}
+                  <img class=show-artwork src=http://via.placeholder.com/300x300>
+                {.end}
 
-              <span class=show-morsel>
-                <h1>{title}</h1>
-                <p>{excerpt}</p>
-                <form><button formaction="{sourceUrl}">Learn more</button></form>
-              </span>
-            </a>
-          </li>
-        {.end}
-      </ul>
-    </squarespace:query>
+                <span class=show-morsel>
+                  <h1>{title}</h1>
+                  <p>{excerpt}</p>
+                  <form><button formaction="{sourceUrl}">Learn more</button></form>
+                </span>
+              </a>
+            </li>
+          {.end}
+        </ul>
+      </squarespace:query>
+    </div>
+
+
+    <div role=main data-content-field=main-content >{squarespace.main-content}</div>
   </div>
-
-
-  {squarespace.main-content}
-</div>
+{.end}

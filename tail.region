@@ -1,12 +1,9 @@
-    <!-- Footer Block -->
-    {@|apply main-footer.block}
-    <!-- End Footer Block -->
+  <!-- Footer Block -->
+  {@|apply main-footer.block}
+  <!-- End Footer Block -->
 
-    <!--  -->
-    {squarespace-footers}
-    <!-- End Squarespace Footers -->
-
-  {# This closes the #prx-body-wrap }
-  </div>
+  <!--  -->
+  {squarespace-footers}
+  <!-- End Squarespace Footers -->
 </body>
 </html>

@@ -5,11 +5,11 @@
     <squarespace:block-field id=prx-technology-clients columns=12 label="Clients" />
   </section>
 
-  <section role=main data-content-field=main-content class=case-study>
-    <div>
-      {squarespace.main-content}
-    </div>
+  <section class=case-study>
+    <div role=main data-content-field=main-content >{squarespace.main-content}</div>
   </section>
 
   <squarespace:block-field id=prx-technology-history columns=12 label="History" />
+
+  <squarespace:block-field id=prx-technology-footer columns=12 label="Technology Footer" />
 </div>

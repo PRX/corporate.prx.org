@@ -1,12 +1,10 @@
 {.section collection}
   <div id=prx-index-list-exchange class=prx-index-list>
     {.repeated section collections}
-      <div class=prx-index-list-section>
-        {.section mainImage}
-          <img {@|image-meta} class=prx-splash>
-        {.end}
+      <div class="prx-index-list-section {.section mainImage}prx-backdrop{.end}">
+        {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
 
-        <section>{mainContent}</section>
+        <section data-content-field=main-content>{mainContent}</section>
       </div>
     {.end}
   </div>

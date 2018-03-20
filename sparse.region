@@ -1,3 +1,7 @@
-<div role=main data-content-field=main-content id=prx-region-sparse class=prx-region-root>
-  {squarespace.main-content}
-</div>
+{.section collection}
+  <div id=prx-region-sparse class="prx-region-root {.section mainImage}prx-backdrop{.end}">
+    {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
+
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+  </div>
+{.end}

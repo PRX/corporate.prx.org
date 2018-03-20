@@ -1,8 +1,4 @@
 #prx-region-services {
-  margin: 0 auto;
-  max-width: 1105px;
-  padding: 50px 3em 0;
-
   h1 {
     font-size: 2.75em;
     letter-spacing: 1px;
@@ -12,15 +8,24 @@
     color: #767676;
     font-size: 1.25em;
     margin: 0 auto;
-    max-width: 725px;
   }
 
+  #prx-services-header {
+    margin: 0 auto;
+    max-width: 725px;
+    padding: 0 3em;
+  }
+
+  // Services page has a unique intra-page nav
   nav {
     display: flex;
     flex-wrap: wrap;
     font-family: "Montserrat";
     justify-content: space-evenly;
-    margin: 4em 0 0;
+    margin: 4em auto 0;
+    max-width: 1105px;
+    padding: 0 3em;
+    position: relative;
 
     a {
       border-bottom: 3px solid @prxOrange;
@@ -53,15 +58,12 @@
     }
   }
 
-
-  section {
-    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
-    padding: 5em 0 4em;
-
-    &:last-child {
-      border: none;
-      padding-bottom: 50px;
+  // Content styles on the services page are somewhat non-standard
+  .prx-index-list-section {
+    div[data-type='page'] {
+      border-bottom: 1px solid rgba(151, 151, 151, 0.3);
     }
+    &:last-child div[data-type='page'] { border: none; }
 
     h3 {
       margin: 0;
