@@ -2,20 +2,20 @@
   <div id=prx-region-shows class=prx-region-root>
     <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
 
-    <squarespace:query collection=shows-collection columns=12 limit=3>
-      <ul class=prx-show-tiles>
+    <ul class=prx-show-tiles></ul>
+      <squarespace:query collection=shows-collection columns=12 limit=3>
         {.repeated section items}
           {@|apply show-tile.block}
         {.end}
-      </ul>
-    </squarespace:query>
+      </squarespace:query>
+    </ul>
 
     <section id=prx-shows-radiotopia>
       <div>
         <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
 
-        <squarespace:query collection=shows-collection columns=12 limit=15>
-          <ul class=prx-radiotopia-tiles>
+        <ul class=prx-radiotopia-tiles>
+          <squarespace:query collection=shows-collection columns=12 limit=15></squarespace:query>
             {.repeated section items}
               <li class="{.if customContent.artworkBorder}artwork-border{.end}">
                 {.main-image?}
@@ -25,18 +25,20 @@
                 {.end}
               </li>
             {.end}
-          </ul>
-        </squarespace:query>
+          </squarespace:query>
+        </ul>
+
+        <squarespace:block-field id=prx-shows-radiotopia-footer columns=12 label="Radiotopia Footer" />
       </div>
     </section>
 
-    <squarespace:query collection=shows-collection columns=12 skip=3 limit=100>
-      <ul class=prx-show-tiles>
+    <ul class=prx-show-tiles></ul>
+      <squarespace:query collection=shows-collection columns=12 skip=3 limit=100>
         {.repeated section items}
           {@|apply show-tile.block}
         {.end}
-      </ul>
-    </squarespace:query>
+      </squarespace:query>
+    </ul>
 
     <hr>
 
