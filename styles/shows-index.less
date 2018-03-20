@@ -37,9 +37,12 @@
           width: 300px;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           .show-morsel {
             display: flex;
+
+            @media (max-width: @navBarsCollapseWidth) { display: none; }
           }
         }
 
