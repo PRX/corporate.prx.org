@@ -15,7 +15,7 @@
         <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
 
         <ul class=prx-radiotopia-tiles>
-          <squarespace:query collection=shows-collection columns=12 limit=15>
+          <squarespace:query collection=shows-collection category=Radiotopia columns=12 limit=15>
             {.repeated section items}
               <li class="{.if customContent.artworkBorder}artwork-border{.end}">
                 {.main-image?}
