@@ -30,7 +30,7 @@
       </div>
     </section>
 
-    <squarespace:query collection=shows-collection columns=12 skip=3>
+    <squarespace:query collection=shows-collection columns=12 skip=3 limit=100>
       <ul class=prx-show-tiles>
         {.repeated section items}
           {@|apply show-tile.block}
