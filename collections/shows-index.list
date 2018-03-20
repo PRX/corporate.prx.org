@@ -1,5 +1,9 @@
 {.section collection}
-  {.repeated section collections}
-    <section>{mainContent}</section>
-  {.end}
+  <div id=prx-index-list-shows class=prx-index-list>
+    {.repeated section collections}
+      <div id="{urlId}" class=prx-index-list-section>
+        <section data-content-field=main-content>{mainContent}</section>
+      </div>
+    {.end}
+  </div>
 {.end}

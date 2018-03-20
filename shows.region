@@ -1,57 +1,47 @@
-<div role=main data-content-field=main-content id=prx-region-shows class=prx-region-root>
-  <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
+{.section collection}
+  <div id=prx-region-shows class=prx-region-root>
+    <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
 
-  <squarespace:query collection=shows-collection columns=12 limit=3>
-    <ul class=prx-show-tiles>
-      {.repeated section items}
-        <li class="{.if customContent.artworkBorder}artwork-border{.end}">
-          <a href="{sourceUrl}">
-            {.main-image?}
-              <img class=show-artwork {@|image-meta} />
-            {.or}
-              <img class=show-artwork src=http://via.placeholder.com/300x300>
+    <squarespace:query collection=shows-collection columns=12 limit=3>
+      <ul class=prx-show-tiles>
+        {.repeated section items}
+          {@|apply show-tile.block}
+        {.end}
+      </ul>
+    </squarespace:query>
+
+    <section id=prx-shows-radiotopia>
+      <div>
+        <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
+
+        <squarespace:query collection=shows-collection columns=12 limit=15>
+          <ul class=prx-radiotopia-tiles>
+            {.repeated section items}
+              <li class="{.if customContent.artworkBorder}artwork-border{.end}">
+                {.main-image?}
+                  <img class=show-artwork {@|image-meta} />
+                {.or}
+                  <img class=show-artwork src=http://via.placeholder.com/300x300>
+                {.end}
+              </li>
             {.end}
+          </ul>
+        </squarespace:query>
+      </div>
+    </section>
 
-            <span class=show-morsel>
-              <h1>{title}</h1>
-              <p>{excerpt}</p>
-              <form><button formaction="{sourceUrl}">Learn more</button></form>
-            </span>
-          </a>
-        </li>
-      {.end}
-    </ul>
-  </squarespace:query>
+    <squarespace:query collection=shows-collection columns=12 skip=3>
+      <ul class=prx-show-tiles>
+        {.repeated section items}
+          {@|apply show-tile.block}
+        {.end}
+      </ul>
+    </squarespace:query>
 
-  <section id=prx-shows-radiotopia>
-    <div>
-      <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
-    </div>
-  </section>
+    <hr>
 
-  <squarespace:query collection=shows-collection columns=12 skip=0>
-    <ul class=prx-show-tiles>
-      {.repeated section items}
-        <li class="{.if customContent.artworkBorder}artwork-border{.end}">
-          <a href="{sourceUrl}">
-            {.main-image?}
-              <img class=show-artwork {@|image-meta} />
-            {.or}
-              <img class=show-artwork src=http://via.placeholder.com/300x300>
-            {.end}
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
 
-            <span class=show-morsel>
-              <h1>{title}</h1>
-              <p>{excerpt}</p>
-              <form><button formaction="{sourceUrl}">Learn more</button></form>
-            </span>
-          </a>
-        </li>
-      {.end}
-    </ul>
-  </squarespace:query>
-  <hr>
-
-
-  {squarespace.main-content}
-</div>
+    <squarespace:block-field id=prx-shows-footer columns=12 label="Shows Footer" />
+  </div>
+{.end}
