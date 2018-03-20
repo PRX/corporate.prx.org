@@ -6,7 +6,7 @@
   {.end}
 
   <span>
-    <h4>{title}</h3>
+    <h5>{title}</h3>
     {excerpt}
   </span>
 
