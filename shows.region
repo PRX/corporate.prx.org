@@ -14,19 +14,21 @@
       <div>
         <squarespace:block-field id=prx-shows-radiotopia-header columns=12 label="Radiotopia Header" />
 
-        <ul class=prx-radiotopia-tiles>
-          <squarespace:query collection=shows-collection category=Radiotopia columns=12 limit=15>
-            {.repeated section items}
-              <li class="{.if customContent.artworkBorder}artwork-border{.end}">
-                {.main-image?}
-                  <img class=show-artwork {@|image-meta} />
-                {.or}
-                  <img class=show-artwork src=http://via.placeholder.com/300x300>
-                {.end}
-              </li>
-            {.end}
-          </squarespace:query>
-        </ul>
+        <div class=prx-radiotopia-tiles-wrapper>
+          <ul class=prx-radiotopia-tiles>
+            <squarespace:query collection=shows-collection category=Radiotopia columns=12 limit=15>
+              {.repeated section items}
+                <li class="{.if customContent.artworkBorder}artwork-border{.end}">
+                  {.main-image?}
+                    <img class=show-artwork {@|image-meta} />
+                  {.or}
+                    <img class=show-artwork src=http://via.placeholder.com/300x300>
+                  {.end}
+                </li>
+              {.end}
+            </squarespace:query>
+          </ul>
+        </div>
 
         <squarespace:block-field id=prx-shows-radiotopia-footer columns=12 label="Radiotopia Footer" />
       </div>
