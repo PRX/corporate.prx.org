@@ -12,21 +12,21 @@ function keepInWindow(sideNav) {
   var maxAllowedScroll = navGroup.offsetHeight + 100; // 30px of padding-top on page
 
   if (window.scrollY > maxAllowedScroll) {
-    sideNav.className = 'fixed-nav-container no-scroll';
+    sideNav.classList.add('fixed');
   } else {
-    sideNav.className = 'fixed-nav-container';
+    sideNav.classList.remove('fixed');
   }
 }
 
-var companyAboutNav = document.getElementsByClassName('fixed-nav-container')[0];
-var contentSections = document.querySelectorAll('.prx-about-content section');
-var navLinks = document.querySelectorAll('.fixed-nav-container a');
+var companyAboutNav;
+var contentSections;
+var navLinks;
 
 function styleCompanyAboutNav(e) {
   if (!companyAboutNav) {
-    companyAboutNav = document.getElementsByClassName('fixed-nav-container')[0];
-    contentSections = document.querySelectorAll('.prx-about-content section');
-    navLinks = document.querySelectorAll('.fixed-nav-container a');
+    companyAboutNav = document.getElementById('prx-about-nav');
+    contentSections = document.querySelectorAll('#prx-index-list-about .prx-index-list-section');
+    navLinks = document.querySelectorAll('#prx-about-nav a');
   }
 
   keepInWindow(companyAboutNav)
@@ -36,7 +36,6 @@ function styleCompanyAboutNav(e) {
 
   for (let i = 0; i < contentSections.length; i++) {
     if (isElementInViewport(contentSections[i])) {
-      // ordering is consistent between sections & side nav, so just use same index
       navLinks[i].classList.add('active')
       break;
     }

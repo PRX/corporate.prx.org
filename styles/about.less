@@ -1,60 +1,39 @@
-#prx-index-about {
-  font-family: 'Montserrat', sans-serif;
-  max-width: 1105px;
-  margin: 0 auto;
-  padding: 30px 3em;
+#prx-index-list-about {
   display: flex;
   flex-direction: row;
+  font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1105px;
+  padding: 30px 3em;
 
-  .prx-about-company-main {
+  @media (max-width: @smallScreenWidth) { padding: 30px 0; }
 
-  }
-
-  .prx-about-nav {
+  .left {
     flex: 0 1 30%;
     min-width: 200px;
 
+    // Left rail is hidden on mobile
     @media (max-width: @smallScreenWidth) { display: none; }
-
-    .fixed-nav-container {
-      width: 160px;
-      margin: 25px 20px;
-      padding: 40px 0 0 0;
-      border-top: 6px solid @prxOrange;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .no-scroll {
-      position: fixed;
-      top: 0;
-    }
-
-    a.active {
-      font-weight: bold;
-    }
-
-    a:last-child {
-      padding-bottom: 40px;
-      border-bottom: 1px solid @prxGrey;
-    }
   }
 
-  .prx-about-content {
-    flex: 0 1 70%;
+  .right {
     display: flex;
+    flex: 0 1 70%;
     flex-direction: column;
+
+    @media (max-width: @smallScreenWidth) { flex: 0 1 100%; }
   }
 
-  .prx-about-company-content-subpage {
-    border-bottom: 1px solid @prxGrey;
-    padding: 30px 0 80px 0;
-    margin: 0 30px;
+  .prx-index-list-section > section {
+    padding: 0;
   }
-  .prx-about-company-content-subpage:first-child {
-    padding-top: 15px;
-  }
+
+  // .prx-about-company-content-subpage {
+  //   border-bottom: 1px solid @prxGrey;
+  //   padding: 30px 0 80px 0;
+  //   margin: 0 30px;
+  // }
 
   #prx-show-all-staff-button {
     border: 2px solid transparent;
@@ -77,12 +56,15 @@
       color: @prxBlack;
     }
   }
+
   ul.expanded {
     display: none;
   }
+
   #prx-show-all-staff {
     display: none;
   }
+
   #prx-show-all-staff:checked {
     ~ ul.expanded{
       display: flex;
@@ -121,6 +103,73 @@
         justify-content: center;
         margin: 0 auto;
       }
+    }
+  }
+}
+
+#prx-about-nav {
+  width: 160px;
+  margin: 25px 20px;
+  padding: 40px 0 0 0;
+  border-top: 6px solid @prxOrange;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    &:last-child {
+      padding-bottom: 40px;
+      border-bottom: 1px solid @prxGrey;
+    }
+  }
+
+  a.active {
+    font-weight: bold;
+  }
+}
+
+.prx-people-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  &.prx-toggle-target { display: none; }
+  .prx-toggle:checked ~ &.prx-toggle-target { display: flex; }
+
+  li {
+    margin: 10px 0;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto;
+    }
+
+    h4 {
+      font-weight: normal;
+      font-size: 1em;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.75em;
     }
   }
 }

@@ -1,40 +1,7 @@
-<div role=main id=prx-region-company class=prx-region-root>
-  <squarespace:navigation navigationId=companyNav template=company-nav />
+{.section collection}
+  <div id=prx-region-company class=prx-region-root>
+    <squarespace:navigation navigationId=companyNav template=company-nav />
 
-  <section class="company-main {collection.urlId}">
-    {.equal?:collection.urlId:"company/partners"}
-      <squarespace:block-field id=prx-partners-header columns=12 label="Partners Intro Header" />
-    {.end}
-
-    <div data-content-field=main-content>{squarespace.main-content}</div>
-
-    {.equal?:collection.urlId:"company/inthenews"}
-      <h4>Press Highlights</h4>
-      <squarespace:query collection=top-press-articles-collection columns=12 limit=6>
-        <ul class=prx-news-collection>
-          {.repeated section items}
-          <li>
-            <p class=prx-news-source>{customContent.source}</p>
-            <a href="{sourceUrl}"><h3>{title}</h3></a>
-            <p class=prx-news-details>By {customContent.author} &#8226; {customContent.pubDate}</p>
-          </li>
-          {.end}
-        </ul>
-      </squarespace:query>
-
-      <h4>Most Recent Press</h4>
-      <squarespace:query collection=recent-press-articles-collection columns=12 limit=6>
-        <ul class=prx-news-collection>
-          {.repeated section items}
-          <li>
-            <p class=prx-news-source>{customContent.source}</p>
-            <a href="{sourceUrl}"><h3>{title}</h3></a>
-            <p class=prx-news-details>By {customContent.author} &#8226; {customContent.pubDate}</p>
-          </li>
-          {.end}
-        </ul>
-      </squarespace:query>
-    {.end}
-  </section>
-
-</div>
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+  </div>
+{.end}
