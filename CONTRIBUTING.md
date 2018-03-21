@@ -18,7 +18,7 @@ It's possible to include Squarespace-specific metadata in stylesheets (they call
 
 ## Custom Types
 
-Custom types (also called [custom post types](https://developers.squarespace.com/custom-post-types/), and not to be confused with _custom collections_) allow you to define data classes. These posts (it can helpful to think of them as objects) can be added to a collection (custom or otherwise).
+Custom types (also called [custom post types](https://developers.squarespace.com/custom-post-types/), and not to be confused with _custom collections_) allow you to define data classes. These posts (it can helpful to think of them as objects, but I'll call them posts) can be added to a collection (custom or otherwise).
 
 An example of a native post type is `text`, which is what Squarespace uses for its blogging feature. An example of a custom type we have defined is `prxPerson`, which we use for the staff list.
 
@@ -28,19 +28,19 @@ The names of the base types and the fields can be confusing. A `text` base type 
 
 ## Navigations
 
-Unless you define them, a Squarespace template won't have any [navigations](https://developers.squarespace.com/menus-navigation/). Navigations are simply a grouping of top-level content (pages, collections, links, etc) that get created in the Squarespace CMS that has a name. How navigations are displayed is entirely dependant on how the site is coded. There is no inherent display or on-screen place where navigations end up.
+Unless you define them, a Squarespace template won't have any [navigations](https://developers.squarespace.com/menus-navigation/). Navigations are simply a named grouping of top-level content (`Page`, `Link`, etc) that get created in the Squarespace CMS. How navigations are displayed is entirely dependant on how the site is coded. There is no inherent display or on-screen place where navigations end up just by virtue of the navigation being created and things being put into it.
 
 The standard use of a navigation is to loop through all the items that have been added to it, and spit out an `<a>` or `<li>` tag for each one.
 
 The things that belong to a navigation are managed through the CMS, not the template config; only the fact that the navigation exists is defined in the config. Once the navigation is defined, it will appear in the CMS.
 
-**NOTE:** It's not really possible to rename a navigation that has any members. If for some reason you need the name of a navigation to change, create a new one and move all the content from the old one to the new one before removing the old one from the config.
+**NOTE:** It's not really possible to rename a navigation that has any members. If for some reason you need the name of a navigation to change, create a new one and move all the content from the old one to the new one before removing the old one from the config. Don't remove a navigation from the template config if it still has content in it; the content could be lost.
 
 ## Layouts
 
-In the hierarchy of a Squarespace site and its pages, the template is at the top, and [layouts](https://developers.squarespace.com/layouts-regions/) are one step below that. Nearly all top-level content that gets added to the site through the CMS (a basic page, a complex index page, a collection, etc) will use a template. The template is party (but not entirely) responsible for how the HTML for the content gets generated.
+In the hierarchy of a Squarespace site and its pages, the template is at the top, and [layouts](https://developers.squarespace.com/layouts-regions/) are one step below that. Nearly all top-level content that gets added to the site through the CMS (a basic page, a complex index `Page`, a collection like a `Blog`, etc) will use a layout. The layout is partly (but not entirely) responsible for how the HTML for the content gets generated.
 
-In the template config, you define layouts with a name and a list of regions. The regions correspond to `.region` files that must exist in the root of the template directory. Regions can be included in multiple layouts, which helps with code reuse. There is not intrinsic difference between the regions in a layout, and different layouts can have vastly different region configurations.
+In the template config, you define layouts with a name and a list of `regions`. Each region correspond to `.region` files that must exist in the root of the template directory. Regions can be included in multiple layouts, which helps with code reuse. There is no intrinsic difference between the regions in a layout, and different layouts in a single template can have vastly different region configurations.
 
 When a the HTML is generated for a page, everything that is generated is represented in some way by regions in the layout. If something doesn't exist in the regions in a layout's definition, pages that use that layout won't include it.
 
@@ -52,7 +52,7 @@ When some page uses a given layout, the resulting HTML for that page is simply t
 
 This is my best attempt as explaining how all the different pieces (layouts, regions, blocks, content, etc) come together to turn into some HTML. Some of this will be conceptual, some of it will be a guide to buttons and menus.
 
-**NOTE:** Squarespace has a built in content type called a `Page`. Other types of content (`Gallery`, `Blog`, `Album`, `Link`, etc) also turn into webpages on the site, even though they aren't of the `Page` type. I'll use this nomenclature (`Page` vs webpage) to try and keep things straight.
+**NOTE:** Squarespace has a built in content type called a `Page`. Other types of content (`Gallery`, `Blog`, `Album`, etc) also turn into _webpages_ on the site, even though they aren't of the `Page` type. I'll use this nomenclature (`Page` vs webpage) to try and keep things straight.
 
 If you look in the Squarespace CMS, all content exists in either: a navigation, or **Not Linked**. There's no difference (other than how things may eventually show up when navigations are rendered). You can move content whenever and wherever you'd like between navigations and **Not Linked**.
 
@@ -76,7 +76,7 @@ There are some cases where Squarespace lets you pass in a block as a template fo
 <squarespace:navigation navigationId="mainNav" template="main-navigation" />
 ```
 
-Template in that example is just the `main-navigation.block` file.
+The `template` in that example is just the `main-navigation.block` file; the context will be scoped to the navigation automatically.
 
 The normal way of including a partial is: `{@|apply some-block.block}`;
 
@@ -85,7 +85,7 @@ You can include partials in regions and collection views (more on those later).
 ## Open Block Fields
 
 When you include [open block field](https://developers.squarespace.com/open-block-field/) in a layout, it provides an area where content on a page can
-be created and managed through the CMS. This is similar to editing the **main content** of a `Page` or `Blog` post. We use it as a mechanism to create several, distinct WYSIWYG editable areas on a page.
+be created and managed through the CMS. This is similar to editing the **main content** of a `Page` or `Blog` post. We use it as a mechanism to create several, distinct WYSIWYG editable areas on a page, especially when we have content that needs to be editable through the CMS on the same page as content that is hard coded into the template.
 
 ```
 <squarespace:block-field id="blockField1" columns="12"/>
@@ -93,7 +93,7 @@ be created and managed through the CMS. This is similar to editing the **main co
 
 Any content added to the open block field essentially lives under the given `id`. If `block-field` tags on different pages shared the same `id` they would also have the same content.
 
-It is possible to generate the `id` for the tag dynamically. This allows you to define an open block field on a view that gets reused (for example, a `Blog` post view), and each instance of the view would have unique content in the open block field.
+It is possible to generate the `id` for the tag dynamically. This allows you to define an open block field on a view that gets reused (for example, a `Blog` post view), and each instance of the view would have unique content in the open block field. (e.g., `id="blog-post-{the_blog_post_id}")
 
 ## Layout + Region + Content
 
@@ -101,13 +101,13 @@ This is now getting into the meat of how webpages are formed.
 
 ### Layout
 
-As discussed earlier, a layout has no code itself; it simply defines a set of **regions** that get rendered for any page using that layout.
+As discussed earlier, a layout has no code itself; it simply defines a set of **regions** that get rendered together for any page using that layout.
 
-Changing the layout of any `Page`/etc is (generally) a non-destructive operation. The actual content for the `Page` belongs to the page; the layout just determines what code should exist around that content.
+Changing the layout of any `Page`/etc is (generally) a non-destructive operation. The actual content for the `Page` belongs to the page; the layout just determines what code should exist around that content. Take some care when changing the layout of content, though.
 
 ### Region
 
-A region is the outer-most layer where HTML can be written. Regions have access to the Squarespace context for whatever content is currently being rendered (you can always view this context by appending `?format=json-pretty` to the URL for the content).
+A region is the outer-most layer where HTML can actually be written. Regions have access to the Squarespace context for whatever content is currently being rendered (you can always view this context by appending `?format=json-pretty` to the URL for the content).
 
 Most of the layouts that are defined in our template include three regions. They tend to share the `head` and `tail` region, with some other region between those.
 
@@ -127,9 +127,9 @@ Start by looking at the `sparse.region`, which is very minimal and used when we 
 
 The first bit of JSON-T you'll see is `{.section collection}`. The `.section` directive allows you to navigate down the context object (i.e, _zoom in_). Everything between `{.section}` and `{.end}` will be scoped into whatever was passed into `section`.
 
-This is apparent when looking at the next line: `{.section mainImage}prx-backdrop{.end}`. `mainImage` is (possibly) a property of `collection`. Since we're already scoped into `collection`, we can reference `mainImage` directly (rather than, say `collection.mainImage`).
+This is apparent when looking at the next line: `{.section mainImage}prx-backdrop{.end}`. `mainImage` is (possibly) a property of `collection`. Since we're already scoped into `collection`, we can reference `mainImage` directly (rather than, say, `collection.mainImage`).
 
-**NOTE:** `mainImage` corresponds to the **banner/thumbnail image** that you can add to many content types. When it's missing, the `mainImage` property doesn't exist; `section` fails gracefully, so this is effectively `if (mainImage exists)…`
+**NOTE:** `mainImage` corresponds to the **banner/thumbnail image** that you can add to many types of content in the CMS. When it's missing, the `mainImage` property doesn't exist; `section` fails gracefully, so this is effectively `if (mainImage exists)…`
 
 The **_really interesting_** part of this region is the key to connecting the region (and, thus, layout) to the per-webpage content. `{squarespace.main-content}`. Read on to see what main content is.
 
@@ -137,39 +137,37 @@ The **_really interesting_** part of this region is the key to connecting the re
 
 Main content (which is sometimes referenced as `main-content` and sometimes `mainContent`) is a proxy for **the actual content** of the webpage being rendered. Anywhere `mainContent` is injected, the content will be inserted. It can even be referenced multiple times in a region or layout (though that would be odd).
 
-In the case of a `Page`, `main-content` is a string of HTML. You can look at the `?format-json-pretty` for somethign like the **Technology** page to see that; on the context object there is a property called `mainContent` that is just a bunch of HTML.
+In the case of a `Page`, `main-content` is a string of HTML. You can look at the `?format-json-pretty` for somethign like the **Technology** page to see that; on the context object there is a property called `mainContent` that is just a bunch of HTML. When `{squarespace.main-content}` gets called in the context of rendering the Technology page, it just sticks that HTML right in.
 
-**NOTE:** The distinction between `squarespace.main-content` and `mainContent` is that the former usually always refers to the top-level content, and `mainContent` can refer to content that lives under top-level content (such as with index pages, which are coming up).
+**NOTE:** The distinction between `squarespace.main-content` and `mainContent` is that the former usually always refers to the top-level content, and `mainContent` can refer to content that lives under top-level content (like posts or other pages).
 
-For other types of content, like collection types, there's no `mainConent` for the collection itself, but each member of the collection does have its own `mainContent`. Generally you'll loop through the members and do something to display their `mainContent` (in a grid, list, etc).
+For other types of content, like collection types, there's no `mainContent` for the context itself, but each member of the collection does have its own `mainContent`. Generally you'll loop through the members and do something to display their `mainContent` (in a grid, list, etc).
 
 ### Collections
 
-Before we get to index pages, it's good to understand custom collections.
+Collections are groups of things. Those things can be posts (like images, blog posts, or a custom type like `prxPerson`), as is the case for a `Blog` or `Gallery`. Those things can also be top-level content (like `Page` or `Link`), as is the case for a `Folder` or `Index Page`.
 
-Collections are groups of things. Those things can be second-level content (like images, blog posts, or a custom type like `prxPerson`), as is the case for a `Blog` or `Gallery`. Those things can also be top-level content (like `Page` or `Link`), as is the case for `Folder` or `Index Page`.
+Custom collections let us create collections with specific parameters, like which types of content can be added to the collection. Default collection types will never allow custom post types, so any time you want a collection with custom posts you'll need to make a custom collection.
 
-Custom collections let us create collections with specific parameters, like which types of content can be added to the collection. Default collection types will never allow custom post types, so any time you want a collection with custom objects you need to make a custom collection.
-
-Along with the `.conf` file that you use to define a it, a collection can also have a `.list` and/or `.item` file. The `.list` file is used when rendering the collection itself (e.g., `/blog`), and the item is used when rendering a member of the collection (`/blog/first-post`).
+Along with the `.conf` file that you use to define it, a collection can also have a `.list` and/or `.item` file. The `.list` file is used when rendering the collection itself (e.g., `/blog`), and the `.item` file is used when rendering a member of the collection (`/blog/first-post`).
 
 All the other rules we've covered still apply here. Within the `.list` or `.item` file there's a context (including either the collection, or the member of the collection), and you can access the properties of that context.
 
 #### Folders
 
-Folders are a collection type with the `"folder": true` flag. When a collection is a folder, it allows top-level content (`Page`, `Link`, etc) rather than things like images and blog posts.
+Folders are a collection type with the `"folder": true` flag. When a collection is a folder, it allows top-level content (`Page`, `Link`, etc) to be added, rather than posts (images, blog posts, etc).
 
 #### Index Pages
 
 Index pages are folders in disguise. In addition to the `folder: true` flag, they also have an `indexType` property on the collection definition. We only use the `stacked` index type, but the value is largely irrelevant when building custom pages.
 
-Since the members of an index page collection are other pages, this gives us another way of building webpages from smaller parts.
+Since the members of an index page collection are other pages, this gives us a way of building more complex webpages from smaller parts.
 
 If you look at `generic-index.list`, you'll see that the `collection` object on the context has a `collections` property. Each member of `collections` is another `Page` that was added to that index page collection. When we loop through them, we use the `{mainContent}` variable to insert the main content HTML of each sub-page. The result is a single page of HTML that includes content from many different `Pages` in the Squarespace CMS.
 
-**NOTE:** You may be thinking, won't we end up with a header and footer for each sub-page? No. Since we are inlcuding only the `mainContent` of each sub-page, there won't be anything wrapping the content, other than what we include in the `.list` file. The layout that is selected for a sub-page (and, thus, the regions that that layout includes) are irrelevant.
+**NOTE:** You may be thinking, won't we end up with a header and footer for each sub-page? No. Since we are inlcuding only the `mainContent` of each sub-page, there won't be anything wrapping the content, other than what we include in the `.list` file. The layout that is selected for a sub-page (and, thus, the regions that that layout includes, and the code in the regions) are irrelevant.
 
-One (perhaps unintended) benefit of index pages is that they offer an additional layer where custom code can be included around CMS content. If you think about a `Page`, from the inside out we have: the CMS content associated with the `Page`, and the regions that are include in the layout that the `Page` is using. That's really only one opportunity to add code around the content, and any pages that use the layout will share all that code. This works in a lot of cases, but…
+One (perhaps unintended) benefit of index pages is that they offer an additional layer where custom code can be included around CMS content. If you think about a `Page`, from the inside out we have: the CMS content associated with the `Page`, and the regions that are include in the layout that the `Page` is using (where `main-content` gets called at some point). That's really only one opportunity to add code around the content, and any pages that use the layout will share all that code. This works in a lot of cases, but…
 
 If you think about webpages on the site like those in the **Company** section (About, Partners, etc), the individual pages are quite different, but they do share a good amount of code. For example, they all use the Company section sub-nav. It makes sense for them to all share a single layout that includes the sub-nav.
 
