@@ -17,6 +17,8 @@
 
     <title>PRX{.equal?:collection.urlId:"home"}{.or} – {collection.navigationTitle}{.end}</title>
 
+    {@|apply open-graph.block}
+
     <squarespace:script src=main.js combo=false />
     <squarespace:script src=domain.js combo=false />
     <squarespace:script src=squarespace-imageloader.js combo=false />
