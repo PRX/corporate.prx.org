@@ -1,42 +1,11 @@
-#prx-region-technology {
-  .case-study {
-    background: #102842;
-    color: white;
-    margin: 0 auto;
-    padding: 0 2em;
+div[id='prx-id-technology/case-study'] {
+  background: #102842;
+  color: white;
 
-    & > div {
-      margin: 0 auto;
-      max-width: 1080px;
-    }
-  }
-}
+  blockquote {
+    background: #364a5e;
+    padding: 3em 5em;
 
-#prx-technology-content-header {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 725px;
-  padding: 0 2em;
-
-  p {
-    font-size: 1.2em;
-    opacity: 0.7;
-  }
-}
-
-#prx-technology-history {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 725px;
-  padding: 0 2em;
-}
-
-#prx-technology-clients-wrapper {
-  margin: 0 auto;
-  padding: 0 2em;
-
-  & > div {
-    margin: 0 auto;
-    max-width: 1080px;
+    @media (max-width: @navBarsCollapseWidth) { padding: 2em 1em; }
   }
 }
