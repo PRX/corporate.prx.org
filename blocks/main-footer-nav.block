@@ -5,7 +5,7 @@
         <h1>{collection.navigationTitle}</h1>
         {.repeated section items}
           {.section externalLink}
-            <a href={url} {.section newWindow} target=_blank{.end}>{title}</a>
+            <a href={url} {.section newWindow}target=_blank{.end}>{title}</a>
           {.end}
         {.end}
       </div>
