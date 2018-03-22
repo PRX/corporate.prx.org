@@ -1,0 +1,9 @@
+{.section collection}
+  <div id=prx-region-sponsorship class="prx-region-root {.section mainImage}prx-backdrop{.end}">
+    {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
+
+    <squarespace:block-field id=prx-sponsorship-header columns=12 label="Sponsorship Header" />
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+    <squarespace:block-field id=prx-sponsorship-footer columns=12 label="Sponsorship Footer" />
+  </div>
+{.end}
