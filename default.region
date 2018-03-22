@@ -1,5 +1,5 @@
 {.section collection}
-  <div id=prx-region-default class="prx-region-root {.main-image?}prx-backdrop{.end}">
+  <div id="prx-id-{urlId}" class="prx-region-root {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>

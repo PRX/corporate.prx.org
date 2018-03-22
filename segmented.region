@@ -1,5 +1,5 @@
 {.section collection}
-  <div id=prx-region-segmented class="prx-region-root {.main-image?}prx-backdrop{.end}">
+  <div id="prx-id-{urlId}" class="prx-region-root prx-region-segmented {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
     <squarespace:block-field id="prx-segmented-{id}-header" columns=12 label="Header" />
