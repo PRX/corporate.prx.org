@@ -175,7 +175,7 @@ Collections are groups of things. Those things can be posts (like images, blog p
 
 Custom collections let us create collections with specific parameters, like which types of content can be added to the collection. Default collection types will never allow custom post types, so any time you want a collection with custom posts you'll need to make a custom collection.
 
-Along with the `.conf` file that you use to define it, a collection can also have a `.list` and/or `.item` file. The `.list` file is used when rendering the collection itself (e.g., `/blog`), and the `.item` file is used when rendering a member of the collection (`/blog/first-post`).
+Along with the `.conf` file that you use to define it, a collection can also have a `.list` and/or `.item` file. The `.list` file is used when rendering the collection itself (e.g., `/blog`), and the `.item` file is used when rendering a member of the collection (`/blog/first-post`). The `.list` and `.item` files are only needed if the collection or posts are being displayed directly (i.e., visitors will be going to the URL's for those webpages directly).
 
 All the other rules we've covered still apply here. Within the `.list` or `.item` file there's a context (including either the collection, or the member of the collection), and you can access the properties of that context.
 
