@@ -2,7 +2,7 @@
   <div id=prx-region-services class="prx-region-root {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
-    <squarespace:block-field id="prx-services-{id}" columns=12 label="Services Header" />
+    <squarespace:block-field id="prx-services-header" columns=12 label="Services Header" />
 
     <nav>
       {.repeated section collections}
