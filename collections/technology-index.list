@@ -1,9 +1,0 @@
-<div id=prx-index-list-technology class=prx-index-list>
-  {.section collection}
-    {.repeated section collections}
-      <section data-content-field=main-content class=prx-index-list-section>
-        {mainContent}
-      </section>
-    {.end}
-  {.end}
-</div>
