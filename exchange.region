@@ -2,8 +2,6 @@
   <div id=prx-region-exchange class="prx-region-root {.section mainImage}prx-backdrop{.end}">
     {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
 
-    <squarespace:block-field id=prx-exchange-header columns=12 label="Exchange Header" />
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>
-    <squarespace:block-field id=prx-exchange-footer columns=12 label="Exchange Footer" />
   </div>
 {.end}
