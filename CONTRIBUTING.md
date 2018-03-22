@@ -1,3 +1,29 @@
+# Best Practices
+
+## Version Control
+
+Code changes are deployed to Squarespace by pushing to a Git repository that Squarespace provides. When possible, only push changes to Squarespace once they have been merged to `master` in the GitHub repository. Because there are times when changes need to be pushed to Squarespace before they can fully tested or even developed locally, this is not always possible. Use discretion and proceed with caution.
+
+## Squarespace Data & Metadata
+
+The local development server does not host any data; it always pulls from squarespace.com. That means anything managed through the CMS (pages, collections, posts, CMS content of specific pages, the organization of pages into navs/folders/index, etc), or other site-wide settings must be managed through squarespace.com in order to be reflected and available in development.
+
+As an example, if you are changing a custom query to filter on `category`, you must add the category metadata to posts on squarespace.com before you'll be able to test the filtering locally.
+
+## Squarespace Configuration & Code
+
+Changes to configuration or code that impact _what_ is managed through the Squarespace CMS need to get pushed to Squarespace before the can be managed, and thus before the local development server can pull the data back down for testing.
+
+As an example, in order to develop a new navigation it must first be added to the `template.conf`, then pushed to the Squarespace remote so that it will appear in the CMS, then content can be added to the navigation, and then the local server will pull the populated navigation data and code that implements HTML for the navigation can be tested.
+
+A similar workflow would be followed for anything that can only be managed through the CMS: open block field content, pages and page content, the posts in a collection and their content, page settings, and a number of other aspects of the things that make up the site.
+
+## HTML structure
+
+`.region` files that are specific to a certain layout should include a root element with an `id` in the format `prx-region-{layout name}`. This `id` is what generally will be used to distinguish content that layout (e.g., for styling). That root element should also have the class `prx-region-root`.
+
+`.list` files for index pages should include a root element with an `id` like `prx-index-list-{index name}` and have the class `prx-index-list`. Constituent pages of index pages should be wrapped in `<section>` element, which is in a container with the class `prx-index-list-section`.
+
 # Squarespace Fundamentals
 
 Before starting to work on any Squarespace-specific aspects of the site, you should read through most of the developer guide so you have a good understanding of all the components that make up a Squarespace page.
