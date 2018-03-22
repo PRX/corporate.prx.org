@@ -1,6 +1,6 @@
 {.section collection}
-  <div id=prx-region-services class="prx-region-root {.section mainImage}prx-backdrop{.end}">
-    {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
+  <div id=prx-region-services class="prx-region-root {.main-image?}prx-backdrop{.end}">
+    {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
     <squarespace:block-field id=prx-services-header columns=12 label="Services Header" />
 

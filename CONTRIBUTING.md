@@ -153,9 +153,9 @@ Start by looking at the `sparse.region`, which is very minimal and used when we 
 
 The first bit of JSON-T you'll see is `{.section collection}`. The `.section` directive allows you to navigate down the context object (i.e, _zoom in_). Everything between `{.section}` and `{.end}` will be scoped into whatever was passed into `section`.
 
-This is apparent when looking at the next line: `{.section mainImage}prx-backdrop{.end}`. `mainImage` is (possibly) a property of `collection`. Since we're already scoped into `collection`, we can reference `mainImage` directly (rather than, say, `collection.mainImage`).
+This is apparent when looking at the line: `<img {mainImage|image-meta} class=prx-backdrop>`. `mainImage` is (possibly) a property of `collection`. Since we're already scoped into `collection`, we can reference `mainImage` directly (rather than, say, `collection.mainImage`).
 
-**NOTE:** `mainImage` corresponds to the **banner/thumbnail image** that you can add to many types of content in the CMS. When it's missing, the `mainImage` property doesn't exist; `section` fails gracefully, so this is effectively `if (mainImage exists)…`
+**NOTE:** `mainImage` corresponds to the **banner/thumbnail image** that you can add to many types of content in the CMS. When it's missing, the `mainImage` property doesn't exist; `main-image?` fails gracefully, so this is effectively `if (mainImage exists)…`
 
 The **_really interesting_** part of this region is the key to connecting the region (and, thus, layout) to the per-webpage content. `{squarespace.main-content}`. Read on to see what main content is.
 
