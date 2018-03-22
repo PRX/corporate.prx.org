@@ -1,7 +1,7 @@
 {.section collection}
   <div id=prx-index-list-generic class=prx-index-list>
     {.repeated section collections}
-      <div class="prx-index-list-section {.main-image?}prx-backdrop{.end}">
+      <div id="prx-id-{urlId}" class="prx-collection-{id} prx-index-list-section {.main-image?}prx-backdrop{.end}">
         {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
         <section data-content-field=main-content>{mainContent}</section>
