@@ -3,6 +3,15 @@
     {.section mainImage}<img {@|image-meta} class=prx-backdrop>{.end}
 
     <squarespace:block-field id=prx-services-header columns=12 label="Services Header" />
+
+    {.section collections}
+      <nav>
+        {.repeated section @}
+          <a href="#{urlId}">{title}</a>
+        {.end}
+      </nav>
+    {.end}
+
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>
     <squarespace:block-field id=prx-services-footer columns=12 label="Services Footer" />
   </div>
