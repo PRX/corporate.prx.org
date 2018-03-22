@@ -1,0 +1,59 @@
+{.section collection}
+  <div id=prx-index-list-about class=prx-index-list>
+
+    {# Left rail }
+    <div class=left>
+      {.section collections}
+        <nav id=prx-about-nav>
+          <ul>
+            {.repeated section @}
+              <li>
+                <a class="{urlId}" href="#{urlId}">{title}</a>
+              </li>
+            {.end}
+          </ul>
+        </nav>
+      {.end}
+    </div>
+
+    {# Main page content (index sections) }
+    <div class=right>
+      {.repeated section collections}
+        <div id="{urlId}" class="prx-index-list-section {.section mainImage}prx-backdrop{.end}">
+          <section>
+            <div data-content-field=main-content>{mainContent}</div>
+
+            {# Only displyed on Staff page (section) }
+            {.equal?:urlId:"staff"}
+              <ul class=prx-people-tiles>
+                <squarespace:query collection=staff-collection columns=12 limit=6>
+                  {.repeated section items}{@|apply about-person.block}{.end}
+                </squarespace:query>
+              </ul>
+
+              <input type=checkbox id=prx-show-all-staff class=prx-toggle role=button>
+              <label for=prx-show-all-staff id=prx-show-all-staff-button>
+                See All
+              </label>
+
+              <ul class="prx-people-tiles prx-toggle-target">
+                <squarespace:query collection=staff-collection columns=12 skip=6>
+                  {.repeated section items}{@|apply about-person.block}{.end}
+                </squarespace:query>
+              </ul>
+            {.end}
+
+            {# Only displyed on Board Members page (section) }
+            {.equal?:urlId:"board-members"}
+              <ul class=prx-people-tiles>
+                <squarespace:query collection=board-collection columns=12>
+                  {.repeated section items}{@|apply about-person.block}{.end}
+                </squarespace:query>
+              </ul>
+            {.end}
+          </section>
+        </div>
+      {.end}
+    </div>
+  </div>
+{.end}
