@@ -20,9 +20,27 @@ A similar workflow would be followed for anything that can only be managed throu
 
 ## HTML structure
 
-`.region` files that are specific to a certain layout should include a root element with an `id` in the format `prx-region-{layout name}`. This `id` is what generally will be used to distinguish content that layout (e.g., for styling). That root element should also have the class `prx-region-root`.
+Every `.region` file should have a single root element with the following attributes:
 
-`.list` files for index pages should include a root element with an `id` like `prx-index-list-{index name}` and have the class `prx-index-list`. Constituent pages of index pages should be wrapped in `<section>` element, which is in a container with the class `prx-index-list-section`.
+- an `id` of `prx-id-{collection.urlId}`
+- a class of `prx-region-root`
+- a `class` of `prx-id-{collection.urlId}`
+- a `class` of `prx-region-{region name}`
+
+This will allow styling for entire layouts and for specific top-level content in the CMS. Be aware that the `collection.urlId` will change if the **URL Slug** for the content changes in the CMS, so there is some fragility in styling specific webpages in this way, but it is easy and flexible.
+
+Every `.list` file for index pages should an element that wraps all the constituent pages with the following attributes:
+
+- an `id` of `prx-index-list-{index name}`
+- a `class` of `prx-index-list`
+
+Within a `.list` file, each the `mainContent` for the constituent pages should, individually, be wrapped by an element with the following properties:
+
+- an `id` of `prx-id-{urlId}`
+- a `class` of `prx-id-{urlId}`
+- a class of prx-index-list-section
+
+Within that element, the `mainContent` should be wrapped directly by a `<section>` element.
 
 # Squarespace Fundamentals
 

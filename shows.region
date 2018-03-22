@@ -1,5 +1,7 @@
 {.section collection}
-  <div id=prx-region-shows class=prx-region-root>
+  <div id=prx-id-{urlId} class="prx-region-root prx-region-shows prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
+    {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
+
     <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
 
     <ul class=prx-show-tiles>

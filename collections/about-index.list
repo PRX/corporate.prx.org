@@ -8,7 +8,7 @@
           <ul>
             {.repeated section @}
               <li>
-                <a class="{urlId}" href="#{urlId}">{title}</a>
+                <a class={urlId} href=#{urlId}>{title}</a>
               </li>
             {.end}
           </ul>
@@ -19,7 +19,7 @@
     {# Main page content (index sections) }
     <div class=right>
       {.repeated section collections}
-        <div id="prx-id-{urlId}" class="prx-collection-{id} prx-index-list-section {.main-image?}prx-backdrop{.end}">
+        <div id=prx-id-{urlId} class="prx-id-{id} prx-index-list-section {.main-image?}prx-backdrop{.end}">
           {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
           <section>

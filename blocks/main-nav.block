@@ -1,13 +1,13 @@
 <nav id=prx-main-nav>
   <ul>
     {.repeated section items}
-      <li class="{.section active}active {.end}{.section externalLink}ext-link{.end}">
+      <li class="{.section active}active{.end} {.external-link?}ext-link{.end}">
         {.section collection}
-          <a href="{fullUrl}">{navigationTitle}</a>
+          <a href={fullUrl}>{navigationTitle}</a>
         {.end}
 
         {.section externalLink}
-          <a href="{url}">{title}</a>
+          <a href={url}>{title}</a>
         {.end}
       </li>
     {.end}
