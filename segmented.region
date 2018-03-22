@@ -1,8 +1,8 @@
 {.section collection}
-  <div id=prx-region-services class="prx-region-root {.main-image?}prx-backdrop{.end}">
+  <div id=prx-region-segmented class="prx-region-root {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
-    <squarespace:block-field id="prx-services-{id}" columns=12 label="Services Header" />
+    <squarespace:block-field id="prx-segmented-{id}" columns=12 label="Header" />
 
     <nav>
       {.repeated section collections}
@@ -12,6 +12,6 @@
 
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>
 
-    <squarespace:block-field id="prx-{id}" columns=12 label="Footer" />
+    <squarespace:block-field id="prx-segmented-{id}" columns=12 label="Footer" />
   </div>
 {.end}
