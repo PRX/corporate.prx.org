@@ -14,6 +14,27 @@
     opacity: 0.5;
   }
 
+  // Generally we only want 3 tiles in the featured section, until the screen
+  // gets so small that only two tiles fit on each row. Then we want a fourth
+  // so it looks even. When the fourth is featured it needs to be removed from
+  // the main grid
+  #prx-show-grid-features {
+    li {
+      &:last-child {
+        display: none;
+
+        @media (max-width: 568px) { display: block; }
+      }
+    }
+  }
+  #prx-show-grid {
+    li {
+      &:first-child {
+        @media (max-width: 568px) { display: none; }
+      }
+    }
+  }
+
   .prx-show-tiles {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +48,16 @@
       margin: 10px 4px;
       padding: 0;
 
-      &.filler { min-width: 300px; }
+      &.filler {
+        min-width: 300px;
+
+        @media (max-width: 930px) { min-width: 260px; }
+        @media (max-width: 800px) { min-width: 220px; }
+        @media (max-width: 690px) { min-width: 200px; }
+        @media (max-width: 630px) { min-width: 182px; }
+        @media (max-width: 375px) { min-width: 165px; }
+        @media (max-width: 320px) { min-width: 120px; }
+      }
 
       & > a {
         display: block;
@@ -37,6 +67,13 @@
         img.show-artwork {
           height: 300px;
           width: 300px;
+
+          @media (max-width: 930px) { height: 260px; width: 260px; }
+          @media (max-width: 800px) { height: 220px; width: 220px; }
+          @media (max-width: 690px) { height: 200px; width: 200px; }
+          @media (max-width: 630px) { height: 182px; width: 182px; }
+          @media (max-width: 375px) { height: 165px; width: 165px; }
+          @media (max-width: 320px) { height: 120px; width: 120px; }
         }
 
         &:hover,

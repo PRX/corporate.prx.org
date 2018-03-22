@@ -4,8 +4,8 @@
 
     <squarespace:block-field id=prx-shows-header columns=12 label="Shows Header" />
 
-    <ul class=prx-show-tiles>
-      <squarespace:query collection=shows-collection columns=12 limit=3>
+    <ul class=prx-show-tiles id=prx-show-grid-features>
+      <squarespace:query collection=shows-collection columns=12 limit=4>
         {.repeated section items}
           {@|apply show-tile.block}
         {.end}
