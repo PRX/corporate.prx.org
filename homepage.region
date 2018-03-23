@@ -8,13 +8,17 @@
       <squarespace:block-field id=prx-homepage-content-header columns=12 label="Content Header" />
 
       <div id=prx-homepage-content-shows>
-        <squarespace:query collection=shows-collection columns=12>
-          <ul class=prx-show-tiles>
+        <ul class="prx-show-tiles static">
+          <squarespace:query collection=shows-collection limit=20>
             {.repeated section items}
               {@|apply show-tile.block}
             {.end}
-          </ul>
-        </squarespace:query>
+          </squarespace:query>
+        </ul>
+      </div>
+
+      <div id=prx-homepage-content-shows-scroll-control>
+        <input type=range min=1 max=100 value=0>
       </div>
 
       <squarespace:block-field id=prx-homepage-content-footer columns=12 label="Content Footer" />

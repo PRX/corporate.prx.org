@@ -14,6 +14,10 @@
     opacity: 0.5;
   }
 
+  .prx-show-tiles {
+    max-width: 980px;
+  }
+
   // Generally we only want 3 tiles in the featured section, until the screen
   // gets so small that only two tiles fit on each row. Then we want a fourth
   // so it looks even. When the fourth is featured it needs to be removed from
@@ -32,109 +36,6 @@
       &:first-child {
         @media (max-width: 568px) { display: none; }
       }
-    }
-  }
-
-  .prx-show-tiles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 980px;
-    padding: 0;
-
-    li {
-      list-style: none;
-      margin: 10px 4px;
-      padding: 0;
-
-      &.filler {
-        min-width: 300px;
-
-        @media (max-width: 930px) { min-width: 260px; }
-        @media (max-width: 800px) { min-width: 220px; }
-        @media (max-width: 690px) { min-width: 200px; }
-        @media (max-width: 630px) { min-width: 182px; }
-        @media (max-width: 375px) { min-width: 165px; }
-        @media (max-width: 320px) { min-width: 120px; }
-      }
-
-      & > a {
-        display: block;
-        cursor: default;
-        position: relative;
-
-        img.show-artwork {
-          height: 300px;
-          width: 300px;
-
-          @media (max-width: 930px) { height: 260px; width: 260px; }
-          @media (max-width: 800px) { height: 220px; width: 220px; }
-          @media (max-width: 690px) { height: 200px; width: 200px; }
-          @media (max-width: 630px) { height: 182px; width: 182px; }
-          @media (max-width: 375px) { height: 165px; width: 165px; }
-          @media (max-width: 320px) { height: 120px; width: 120px; }
-        }
-
-        &:hover,
-        &.active {
-          .show-morsel {
-            display: flex;
-
-            @media (max-width: @navBarsCollapseWidth) { display: none; }
-          }
-        }
-
-        .show-morsel {
-          background: rgba(28, 28, 28, 0.9);
-          bottom: 0;
-          color: white;
-          display: none;
-          flex-direction: column;
-          justify-content: center;
-          left: 0;
-          padding: 1em;
-          position: absolute;
-          right: 0;
-          top: 0;
-
-          h1 {
-            font-size: 1.2em;
-            line-height: 1.1;
-            text-align: center;
-          }
-
-          p {
-            font-size: 0.85em;
-            text-align: center;
-          }
-
-          button {
-            background: white;
-            border: none;
-            border-radius: 21px;
-            color: @prxBlack;
-            cursor: pointer;
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85em;
-            height: 42px;
-            line-height: 1;
-            margin: 0 auto;
-            padding: 0px 20px;
-            text-transform: uppercase;
-
-            &:hover {
-              background: @prxBlack;
-              color: white;
-            }
-          }
-        }
-      }
-    }
-
-    .artwork-border {
-      border: 1px solid @prxLightGrey;
     }
   }
 
