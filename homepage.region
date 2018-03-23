@@ -2,7 +2,14 @@
   <div id=prx-id-{urlId} class="prx-region-root prx-region-homepage prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
-    <div style="background: #2c2c2c; min-height: 780px;"></div>
+    <div id=prx-homepage-features>
+      <squarespace:query collection=homepage-features>
+        {.repeated section items}
+          {@|apply homepage-feature.block}
+        {.end}
+      </squarespace:query>
+    </div>
+
 
     <div id=prx-homepage-content>
       <squarespace:block-field id=prx-homepage-content-header columns=12 label="Content Header" />

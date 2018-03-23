@@ -67,3 +67,19 @@
     }
   }
 }
+
+#prx-homepage-features {
+  .prx-homepage-feature {
+    color: white;
+    height: 700px;
+    position: relative;
+
+    img.prx-backdrop {
+      // This is 700 * 1.6 - 1, which is the aspect ratio of the images
+      @media (max-width: 1119px) {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

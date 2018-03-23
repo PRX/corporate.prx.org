@@ -34,8 +34,10 @@ a {
 
 // Some divs, like the region root and index sections, can have a backdrop
 // image; images should always be fairly dark, so the text is changed to white
-div.prx-backdrop {
+div.prx-backdrop,
+section.prx-backdrop {
   color: @prxInverseTextColor;
+  overflow: hidden;
 
   .sqs-block-button {
     a.sqs-block-button-element--medium {

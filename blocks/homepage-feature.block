@@ -1,0 +1,11 @@
+<section id=prx-id-{urlId} class="prx-homepage-feature prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
+  {.equal?:recordTypeLabel:"text"}
+    {.main-image?}<img {@|image-meta} class=prx-backdrop>{.end}
+    {body}
+  {.end}
+
+  {.equal?:recordTypeLabel:"image"}
+    TODO
+    {#  <img {@|image-meta}>  }
+  {.end}
+</section>
