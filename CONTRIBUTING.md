@@ -4,6 +4,8 @@
 
 Code changes are deployed to Squarespace by pushing to a Git repository that Squarespace provides. When possible, only push changes to Squarespace once they have been merged to `master` in the GitHub repository. Because there are times when changes need to be pushed to Squarespace before they can fully tested or even developed locally, this is not always possible. Use discretion and proceed with caution.
 
+Follow [the seven rules](https://chris.beams.io/posts/git-commit/) for your commit messages.
+
 ## Squarespace Data & Metadata
 
 The local development server does not host any data; it always pulls from squarespace.com. That means anything managed through the CMS (pages, collections, posts, CMS content of specific pages, the organization of pages into navs/folders/index, etc), or other site-wide settings must be managed through squarespace.com in order to be reflected and available in development.
