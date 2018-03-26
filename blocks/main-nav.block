@@ -15,14 +15,7 @@
     <li id=prx-user-widget>
       <div id=prx-user-widget-menu>
         <h1 id=prx-user-widget-menu-account>chris@farski.com</h1>
-        <div id=prx-user-widget-menu-apps>
-          <ul>
-            <li><a href="#">PRX Exchange</a></li>
-            <li><a href="#">PRX Exchange</a></li>
-            <li><a href="#">PRX Exchange</a></li>
-            <li><a href="#">PRX Exchange</a></li>
-          </ul>
-        </div>
+        <div id=prx-user-widget-menu-apps></div>
       </div>
     </li>
   </ul>
