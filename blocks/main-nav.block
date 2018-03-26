@@ -13,6 +13,8 @@
     {.end}
 
     <li id=prx-user-widget>
+      <img src=/assets/user.svg class=user-icon>
+
       <div id=prx-user-widget-menu>
         <h1 id=prx-user-widget-menu-account>chris@farski.com</h1>
         <div id=prx-user-widget-menu-apps></div>

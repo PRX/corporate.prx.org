@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     signIn.signedIn(function (prx) {
       const widget = document.getElementById('prx-user-widget');
+      const account = document.getElementById('prx-user-widget-menu-account');
 
       if (!prx.userinfo) {
         // Not logged in
@@ -54,25 +55,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const url = idHost + '/session?return_to=' + encodeURIComponent(window.location);
 
-        widget.innerHTML = '<a class=sign-in href="' + url + '">Sign in</a>';
+        account.innerHTML = '<a class=sign-in href="' + url + '">Sign in</a>';
       } else {
         // Logged in
         widget.classList.add('user-info');
 
-        const icon = document.createElement('img');
-        icon.classList.add('user-icon');
-        icon.src = '/assets/user.svg';
-
-        widget.appendChild(icon);
-
-        const account = document.getElementById('prx-user-widget-menu-account');
+        // const account = document.getElementById('prx-user-widget-menu-account');
         account.innerText = prx.userinfo.email;
 
         signIn.listApps('prx-user-widget-menu-apps');
       }
-
-      // Unhide the widget
-      widget.classList.add('loaded');
     });
   });
 });
