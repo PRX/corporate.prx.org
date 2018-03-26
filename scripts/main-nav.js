@@ -27,7 +27,7 @@ function injectScript(src) {
 }
 
 function addSignInLinkToNav() {
-  let idHost = 'http://id.prx.docker';
+  let idHost = 'https://id.prx.org';
   injectScript(idHost + '/widget.js')
     .then(() => {
       let mainNavEl = document.getElementById('prx-main-nav');
