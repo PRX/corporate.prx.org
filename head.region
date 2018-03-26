@@ -25,6 +25,7 @@
     <squarespace:script src=main-nav.js combo=false />
     <squarespace:script src=about-nav.js combo=false />
     <squarespace:script src=shows.js combo=false />
+    <squarespace:script src=homepage.js combo=false />
 
     {squarespace-headers}
   </head>

@@ -68,18 +68,101 @@
   }
 }
 
-#prx-homepage-features {
-  .prx-homepage-feature {
-    color: white;
-    height: 700px;
-    position: relative;
+#prx-homepage-features-wrapper {
+  position: relative;
 
-    img.prx-backdrop {
-      // This is 700 * 1.6 - 1, which is the aspect ratio of the images
-      @media (max-width: 1119px) {
-        height: 100%;
-        width: auto;
+  #prx-homepage-features-dots {
+    bottom: 2em;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    left: 0;
+    margin: 0 auto 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    z-index: 10;
+
+    li {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      display: inline-block;
+      height: 15px;
+      margin: 0 8px;
+      width: 15px;
+
+      &.active {
+        background: transparent;
+        border: 2px solid white;
       }
     }
+  }
+
+  .rotate {
+    background: white;
+    border-radius: 999px;
+    color: @prxBlack;
+    cursor: w-resize;
+    font-weight: bold;
+    height: 50px;
+    line-height: 48px;
+    margin: -25px 30px 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+    z-index: 10;
+
+    &.right { right: 0px; cursor: e-resize; }
+
+    &:hover {
+      background: @prxBlack;
+      color: @prxInverseTextColor;
+    }
+  }
+
+  #prx-homepage-features {
+    position: relative;
+    transition-property: transform;
+    transition-duration: 0.3s;
+
+    &[data-slide='1'] { transform: translateX(0vw); }
+    &[data-slide='2'] { transform: translateX(-100vw); }
+    &[data-slide='3'] { transform: translateX(-200vw); }
+    &[data-slide='4'] { transform: translateX(-300vw); }
+    &[data-slide='5'] { transform: translateX(-400vw); }
+    &[data-slide='6'] { transform: translateX(-500vw); }
+
+    .prx-homepage-feature {
+      color: white;
+      height: 700px;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+
+      &:nth-child(1) { position: relative; }
+      &:nth-child(2) { position: absolute; left: 100vw; }
+      &:nth-child(3) { position: absolute; left: 200vw; }
+      &:nth-child(4) { position: absolute; left: 300vw; }
+      &:nth-child(5) { position: absolute; left: 400vw; }
+      &:nth-child(6) { position: absolute; left: 500vw; }
+
+      .prx-homepage-feature-content {
+        position: relative;
+        z-index: 7;
+      }
+
+      img.prx-backdrop {
+        z-index: 3;
+        // This is 700 * 1.6 - 1, which is the aspect ratio of the images
+        @media (max-width: 1119px) {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+
   }
 }

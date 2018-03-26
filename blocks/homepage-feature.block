@@ -1,7 +1,8 @@
 <section id=prx-id-{urlId} class="prx-homepage-feature prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
   {.equal?:recordTypeLabel:"text"}
     {.main-image?}<img {@|image-meta} class=prx-backdrop>{.end}
-    {body}
+
+    <div class=prx-homepage-feature-content>{body}</div>
   {.end}
 
   {.equal?:recordTypeLabel:"image"}
