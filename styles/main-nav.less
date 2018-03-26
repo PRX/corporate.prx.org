@@ -35,6 +35,40 @@
         padding: 20px 5px;
         text-decoration: none;
       }
+
+      button {
+        margin: 13px 0;
+        padding: 10px 8px;
+      }
+
+      #prx-apps {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+
+        ul {
+          display: block;
+          flex: none;
+
+          li {
+            padding: 12px;
+            background-color: #444;
+
+            a {
+              margin: 3px 0;
+              padding: 3px;
+            }
+          }
+        }
+      }
+
+      &.prx-userinfo:hover {
+        #prx-apps {
+          display: block;
+        }
+      }
     }
   }
 
