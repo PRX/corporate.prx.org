@@ -3,7 +3,7 @@ function activateCompanyItem() {
     const nav = document.getElementById('prx-main-nav');
     const links = nav.getElementsByTagName('a');
 
-    Array.from(links).forEach(el => {
+    Array.from(links).forEach(function (el) {
       if (el.href.includes('company/')) {
         el.parentElement.classList.add('active');
       }

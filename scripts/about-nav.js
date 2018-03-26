@@ -32,7 +32,7 @@ function styleCompanyAboutNav(e) {
   keepInWindow(companyAboutNav)
 
   // Clear previously active link
-  Array.from(navLinks).forEach(el => { el.classList.remove('active'); });
+  Array.from(navLinks).forEach(function (el) { el.classList.remove('active'); });
 
   for (let i = 0; i < contentSections.length; i++) {
     if (isElementInViewport(contentSections[i])) {
