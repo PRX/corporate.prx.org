@@ -4,7 +4,7 @@
   height: 100%;
   justify-content: center;
   opacity: 0;
-  padding: 0 15px 0 0;
+  padding: 0 20px;
   position: absolute;
   right: 0;
   transition-property: opacity;
@@ -15,6 +15,8 @@
 
   &.loaded {
     opacity: 1;
+
+    &:hover { background: @prxBlack; }
 
     &:hover .user-icon, &:hover .sign-in { opacity: 1; }
     &:hover #prx-user-widget-menu { display: block; }
