@@ -10,8 +10,10 @@
   transition-property: opacity;
   transition-duration: 0.2s;
 
-  // Hide the widget on mobile
-  @media (max-width: @navBarsCollapseWidth) { display: none; }
+  @media (max-width: @navBarsCollapseWidth) {
+    height: auto;
+    top: 0;
+  }
 
   &.loaded {
     opacity: 1;
