@@ -3,10 +3,15 @@
 - Designs for site: on Google Drive
 
 # Develop locally
-- Go to the live site at {siteUrl}/config. Navigate to Advanced settings and turn on Developer Mode.
-- Follow [these](https://developers.squarespace.com/using-git) instructions to clone the Squarespace repository and add this GH repository as another remote destination.
+- Follow [these](https://developers.squarespace.com/using-git) instructions to clone the Squarespace repository and add this GH repository as another remote destination. Briefly:
+```
+% git clone git@github.com:PRX/corporate.prx.org.git
+% cd corporate
+% git remote add sqsp https://corporate-prx-org.squarespace.com/template.git
+[ your credentials are the same ones you use to log in to squarespace ]
+% git fetch sqsp
+```
 - Then follow [these](https://developers.squarespace.com/local-development/) instructions to get the dev server up and running:
--
 ```
 npm install -g @squarespace/server
 squarespace-server {siteUrl}
