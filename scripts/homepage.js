@@ -16,19 +16,21 @@ function homepageRotate(step) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const featuresCount = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature').length;
+  if (document.getElementById('prx-homepage-features-wrapper')) {
+    const featuresCount = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature').length;
 
-  if (featuresCount > 1) {
-    document
-      .getElementById('prx-homepage-features-rotate-left')
-      .addEventListener('click', function () { homepageRotate(-1); });
+    if (featuresCount > 1) {
+      document
+        .getElementById('prx-homepage-features-rotate-left')
+        .addEventListener('click', function () { homepageRotate(-1); });
 
-    document
-      .getElementById('prx-homepage-features-rotate-right')
-      .addEventListener('click', function () { homepageRotate(1); });
-  } else {
-    document.getElementById('prx-homepage-features-dots').classList.add('hidden');
-    document.getElementById('prx-homepage-features-rotate-left').classList.add('hidden');
-    document.getElementById('prx-homepage-features-rotate-right').classList.add('hidden');
+      document
+        .getElementById('prx-homepage-features-rotate-right')
+        .addEventListener('click', function () { homepageRotate(1); });
+    } else {
+      document.getElementById('prx-homepage-features-dots').classList.add('hidden');
+      document.getElementById('prx-homepage-features-rotate-left').classList.add('hidden');
+      document.getElementById('prx-homepage-features-rotate-right').classList.add('hidden');
+    }
   }
 });
