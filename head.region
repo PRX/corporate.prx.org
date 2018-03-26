@@ -20,6 +20,7 @@
     {@|apply open-graph.block}
 
     <squarespace:script src=main.js combo=false />
+    <squarespace:script src=user-widget.js combo=false />
     <squarespace:script src=domain.js combo=false />
     <squarespace:script src=squarespace-imageloader.js combo=false />
     <squarespace:script src=main-nav.js combo=false />
