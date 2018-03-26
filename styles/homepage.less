@@ -91,14 +91,19 @@
       display: inline-block;
       height: 15px;
       margin: 0 8px;
+      transition-property: all;
+      transition-duration: 0.3s;
       width: 15px;
-
-      &.active {
-        background: transparent;
-        border: 2px solid white;
-      }
     }
   }
+
+  // Styling the active dot based on which slide is visible
+  &[data-slide='1'] #prx-homepage-features-dots li:nth-child(1) { background: transparent; border: 2px solid white; }
+  &[data-slide='2'] #prx-homepage-features-dots li:nth-child(2) { background: transparent; border: 2px solid white; }
+  &[data-slide='3'] #prx-homepage-features-dots li:nth-child(3) { background: transparent; border: 2px solid white; }
+  &[data-slide='4'] #prx-homepage-features-dots li:nth-child(4) { background: transparent; border: 2px solid white; }
+  &[data-slide='5'] #prx-homepage-features-dots li:nth-child(5) { background: transparent; border: 2px solid white; }
+  &[data-slide='6'] #prx-homepage-features-dots li:nth-child(6) { background: transparent; border: 2px solid white; }
 
   .rotate {
     background: white;
@@ -128,13 +133,6 @@
     position: relative;
     transition-property: transform;
     transition-duration: 0.3s;
-
-    &[data-slide='1'] { transform: translateX(0vw); }
-    &[data-slide='2'] { transform: translateX(-100vw); }
-    &[data-slide='3'] { transform: translateX(-200vw); }
-    &[data-slide='4'] { transform: translateX(-300vw); }
-    &[data-slide='5'] { transform: translateX(-400vw); }
-    &[data-slide='6'] { transform: translateX(-500vw); }
 
     .prx-homepage-feature {
       color: white;
@@ -167,4 +165,11 @@
     }
 
   }
+
+  &[data-slide='1'] #prx-homepage-features { transform: translateX(0vw); }
+  &[data-slide='2'] #prx-homepage-features { transform: translateX(-100vw); }
+  &[data-slide='3'] #prx-homepage-features { transform: translateX(-200vw); }
+  &[data-slide='4'] #prx-homepage-features { transform: translateX(-300vw); }
+  &[data-slide='5'] #prx-homepage-features { transform: translateX(-400vw); }
+  &[data-slide='6'] #prx-homepage-features { transform: translateX(-500vw); }
 }

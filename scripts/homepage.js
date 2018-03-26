@@ -1,55 +1,34 @@
-function homepageUpdateDots() {
-  const dots = document.querySelectorAll('#prx-homepage-features-dots li');
-
-  if (dots.length === 1) {
-    // Never show only one dot
-    dots[0].classList.add('hidden');
-  } else {
-    // Makre sure the correct dot is active
-    const currentDot = document.querySelector('#prx-homepage-features-dots li.active');
-    if (currentDot) {
-      currentDot.classList.remove('active');
-    }
-
-    const currentSlide = document.getElementById('prx-homepage-features').getAttribute('data-slide');
-
-    dots[+currentSlide - 1].classList.add('active');
-  }
-}
-
 function homepageRotate(step) {
-  const container = document.getElementById('prx-homepage-features');
-  const currentSlide = container.getAttribute('data-slide');
+  const carousel = document.getElementById('prx-homepage-features-wrapper');
+  const currentSlide = +carousel.getAttribute('data-slide');
+  const count = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature').length;
 
-  const features = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature');
-
-  if (+currentSlide + step > +features.length) {
-    console.log('reset')
-    container.setAttribute('data-slide', '1');
-  } else if (+currentSlide + step < 1) {
-    console.log('end')
-    container.setAttribute('data-slide', features.length);
+  if (currentSlide + step > count) {
+    // Go back to the beginning
+    carousel.setAttribute('data-slide', '1');
+  } else if (currentSlide + step < 1) {
+    // Wrap around to the end
+    carousel.setAttribute('data-slide', count);
   } else {
-    console.log('normal')
-    container.setAttribute('data-slide', +currentSlide + step);
+    // One step left or right
+    carousel.setAttribute('data-slide', currentSlide + step);
   }
-
-  homepageUpdateDots()
 }
 
-function homepageRotateLeft() { homepageRotate(-1); }
-function homepageRotateRight() { homepageRotate(1); }
+document.addEventListener('DOMContentLoaded', function () {
+  const featuresCount = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature').length;
 
-function initHomepageFeatures() {
-  const features = document.querySelectorAll('#prx-homepage-features .prx-homepage-feature');
+  if (featuresCount > 1) {
+    document
+      .getElementById('prx-homepage-features-rotate-left')
+      .addEventListener('click', function () { homepageRotate(-1); });
 
-  const left = document.getElementById('prx-homepage-features-rotate-left');
-  const right = document.getElementById('prx-homepage-features-rotate-right');
-
-  left.addEventListener('click', homepageRotateLeft);
-  right.addEventListener('click', homepageRotateRight);
-
-  homepageUpdateDots();
-}
-
-document.addEventListener('DOMContentLoaded', initHomepageFeatures, false);
+    document
+      .getElementById('prx-homepage-features-rotate-right')
+      .addEventListener('click', function () { homepageRotate(1); });
+  } else {
+    document.getElementById('prx-homepage-features-dots').classList.add('hidden');
+    document.getElementById('prx-homepage-features-rotate-left').classList.add('hidden');
+    document.getElementById('prx-homepage-features-rotate-right').classList.add('hidden');
+  }
+});
