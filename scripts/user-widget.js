@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
         account.innerText = prx.userinfo.email;
 
         signIn.listApps('prx-user-widget-menu-apps');
+
+        // TODO This is a temporary notification for logged in users
+        const userNotice = document.getElementById('prx-exchange-user-notice-modal');
+        if (userNotice) {
+          userNotice.classList.add('active');
+        }
       }
     });
   });
