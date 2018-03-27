@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     buttons.forEach(function (button) {
       button.addEventListener('click', function (ev) {
         modal.classList.remove('active');
+
+        switch (modal.getAttribute('data-persistence')) {
+        case 'once':
+          document.cookie = modal.id + '=1';
+          break;
+        default:
+          break;
+        }
       });
     });
   });
