@@ -11,33 +11,6 @@ function prxInjectScript(src, callback) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-// function addUserWidgetToNav() {
-
-      // let signInLI = document.createElement('template');
-
-      // if (prx.userinfo) {
-      //   let userMenu = '<li class="ext-link prx-userinfo">';
-      //   userMenu += '<button>' + prx.userinfo.email + '</button>';
-      //   userMenu += '<div id="prx-apps"></div>';
-      //   userMenu += '</li>';
-      //   signInLI.innerHTML = userMenu;
-
-      // let docFrag = document.createDocumentFragment();
-      // let newNodes = signInLI.content.childNodes;
-
-      // for (let i = 0; i < newNodes.length; i++) {
-      //   docFrag.appendChild(newNodes[i]);
-      // }
-
-      // navList.appendChild(docFrag);
-      // // must wait for DOM insertion to populate apps list
-      // if (prx.userinfo) {
-      //   signIn.listApps('prx-apps');
-      // }
-    // });
-  // });
-// }
-
 document.addEventListener('DOMContentLoaded', function () {
   const idHost = 'https://id.prx.org';
   const scriptUrl = idHost + '/widget.js';
