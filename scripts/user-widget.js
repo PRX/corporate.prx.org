@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // TODO This is a temporary notification for logged in users
         const userNotice = document.getElementById('prx-exchange-user-notice-modal');
-        if (userNotice) {
+        const skipNotice = /prx-exchange-user-notice-modal=1/.test(document.cookie)
+        if (userNotice && !skipNotice) {
           userNotice.classList.add('active');
         }
       }
