@@ -2,6 +2,8 @@
   {@|apply main-footer.block}
   <!-- End Footer Block -->
 
+  {@|apply exchange-notice.block}
+
   <!--  -->
   {squarespace-footers}
   <!-- End Squarespace Footers -->

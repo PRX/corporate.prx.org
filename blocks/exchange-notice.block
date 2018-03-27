@@ -1,0 +1,7 @@
+<div class=prx-modal-wrapper id=prx-exchange-user-notice-modal>
+  <div class=prx-modal>
+    <button class=prx-modal-dismiss-button>✖</button>
+    <h1>PRX Exchange</h1>
+    <p>It's gone. Sorry.</p>
+  </div>
+</div>

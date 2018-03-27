@@ -1,0 +1,33 @@
+.prx-modal-wrapper {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  color: @prxInverseTextColor;
+  display: none;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+
+  &.active { display: flex; }
+
+  .prx-modal {
+    background: @prxBlack;
+    padding: 4em;
+    position: relative;
+
+    .prx-modal-dismiss-button {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0.5em 1em;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &:hover { background: white; color: @prxBlack; }
+    }
+  }
+}
