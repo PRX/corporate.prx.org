@@ -1,0 +1,6 @@
+<div class=prx-modal-wrapper id=prx-exchange-donate-form>
+  <div class=prx-modal>
+    <button class=prx-modal-dismiss-button>✖</button>
+    <a class='commitchange-donate' data-embedded data-designation="Radiotopia"></a>
+  </div>
+</div>

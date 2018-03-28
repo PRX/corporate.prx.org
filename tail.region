@@ -2,7 +2,10 @@
   {@|apply main-footer.block}
   <!-- End Footer Block -->
 
-  {@|apply exchange-notice.block}
+  {@|apply exchange-notice-modal.block}
+  {@|apply donate-modal.block}
+  {@|apply prompt-subscribe-modal.block}
+  {@|apply storytime-subscribe-modal.block}
 
   <!--  -->
   {squarespace-footers}
