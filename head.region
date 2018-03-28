@@ -19,7 +19,6 @@
 
     {@|apply open-graph.block}
 
-    <squarespace:script src=main.js combo=false />
     <squarespace:script src=modals.js combo=false />
     <squarespace:script src=user-widget.js combo=false />
     <squarespace:script src=domain.js combo=false />
