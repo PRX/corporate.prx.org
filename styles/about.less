@@ -135,7 +135,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  padding: 0;
+  margin: 0 auto;
+  max-width: 1105px;
+  padding: 0 3em;
 
   @media (max-width: @smallScreenWidth) { padding: 0 3em; }
 
@@ -143,11 +145,12 @@
   .prx-toggle:checked ~ &.prx-toggle-target { display: flex; }
 
   li {
-    margin: 10px 0;
-    width: 200px;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    margin: 10px 0.3em;
+    text-align: center;
+    width: 160px;
 
     img {
       border-radius: 50%;
