@@ -1,7 +1,6 @@
 <div class=prx-modal-wrapper id=prx-exchange-user-notice-modal data-persistence=once>
   <div class=prx-modal>
     <button class=prx-modal-dismiss-button>✖</button>
-    <squarespace:block-field id=prx-exchange-user-notice-modal-content columns=12 label="Modal Content" />
     <h1>PRX Exchange</h1>
     <p>It's gone. Sorry.</p>
   </div>
