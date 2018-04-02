@@ -30,19 +30,22 @@
   }
 
   #prx-show-all-staff-button {
-    border: 2px solid transparent;
-    margin: auto;
-    width: 180px;
-    display: block;
     background: @prxBlack;
-    color: @prxInverseTextColor;
+    border: 2px solid transparent;
     border-radius: 999px;
+    color: @prxInverseTextColor;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: .8px;
+    margin: 15px auto 0;
     padding: 15px 35px;
-    font: inherit;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .8px;
-    cursor: pointer;
+    transition: 0.1s background-color linear, 0.1s color linear;
+    width: 175px;
 
     &:hover {
       background: white;
