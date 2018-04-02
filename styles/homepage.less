@@ -141,7 +141,10 @@
 
     .prx-homepage-feature {
       color: white;
+      display: flex;
+      flex-direction: column;
       height: 700px;
+      justify-content: center;
       position: absolute;
       top: 0;
       width: 100vw;
@@ -156,6 +159,8 @@
       .prx-homepage-feature-content {
         position: relative;
         z-index: 7;
+
+        @media (max-width: @smallScreenWidth) { padding: 0 3em; }
       }
 
       img.prx-backdrop {
