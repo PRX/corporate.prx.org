@@ -119,7 +119,12 @@
     top: 50%;
     user-select: none;
     width: 50px;
-    z-index: 10;
+    z-index: 15;
+
+    @media (max-width: @smallScreenWidth) {
+      bottom: 1em;
+      top: auto;
+    }
 
     &.right { right: 0px; cursor: e-resize; }
 
