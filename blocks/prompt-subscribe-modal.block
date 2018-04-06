@@ -16,7 +16,7 @@
       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
     </div>
     <div class="mc-field-group input-group">
-        <strong>Programming Type </strong>
+        <strong>Programming Type <span class="asterisk">*</strong>
         <ul><li><input type="checkbox" value="1" name="group[9421][1]" id="mce-group[9421]-9421-0"><label for="mce-group[9421]-9421-0">News/Talk</label></li>
     <li><input type="checkbox" value="2" name="group[9421][2]" id="mce-group[9421]-9421-1"><label for="mce-group[9421]-9421-1">Music</label></li>
     </ul>
