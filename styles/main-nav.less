@@ -26,6 +26,16 @@
         opacity: 1.0;
       }
 
+      &.graphic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img.logo {
+          width: 90px;
+        }
+      }
+
       > a {
         color: inherit;
         display: block;
@@ -48,6 +58,8 @@
       flex-direction: column;
 
       > li {
+        &.logo { display: none; }
+
         > a {
           font-size: 1.4em;
           padding-bottom: 0.3em;
@@ -70,6 +82,8 @@
     top: 0;
     width: 100vw;
     z-index: 10;
+
+    > ul > li.logo { display: none; }
 
     @media (max-width: @navBarsCollapseWidth) {
       position: relative;

@@ -1,5 +1,11 @@
 <nav id=prx-main-nav>
+
+
   <ul>
+    <li class="graphic logo">
+      <img class=logo src="/assets/prx-color.svg">
+    </li>
+
     {.repeated section items}
       <li class="{.section active}active{.end} {.external-link?}ext-link{.end}">
         {.section collection}
