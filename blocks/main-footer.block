@@ -1,5 +1,6 @@
 <footer id=prx-main-footer>
   <div>
+    <img id=prx-main-footer-logo src="/assets/prx-color.svg">
     <squarespace:block-field id=prx-main-footer-social columns=12 label="Footer Logo and Social" />
     <squarespace:block-field id=prx-main-footer-legal columns=12 label="Legal Info" />
     <squarespace:navigation navigationId=footerNav template=main-footer-nav />

@@ -9,6 +9,7 @@
     grid-template-rows: auto;
     grid-template-areas:
       "logo . nav"
+      "social . nav"
       "info . nav";
     margin: 0 auto;
     max-width: 1210px;
@@ -21,6 +22,7 @@
     grid-template-columns: auto;
     grid-template-areas:
       "logo"
+      "social"
       "nav"
       "info";
     margin: 0;
@@ -28,7 +30,7 @@
 }
 
 #prx-main-footer-social {
-  grid-area: logo;
+  grid-area: social;
 
   a {
     display: inline-block;
@@ -51,6 +53,13 @@
   a[href='https://medium.com/prxofficial'] {
     background-image: url('/assets/medium-white.svg');
   }
+}
+
+#prx-main-footer-logo {
+  display: block;
+  grid-area: logo;
+  margin: 0 0 25px 0;
+  width: 135px;
 }
 
 #prx-main-footer-legal {
