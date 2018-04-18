@@ -1,7 +1,7 @@
 <div class=prx-modal-wrapper id=prx-exchange-user-notice-modal data-persistence=once>
   <div class=prx-modal>
     <button class=prx-modal-dismiss-button>✖</button>
-    <h1>PRX Exchange</h1>
-    <p>It's gone. Sorry.</p>
+    <h1>We've moved!</h1>
+    <p>Trying to reach our broadcast distribution services? From now on, head to the PRX Exchange at <a href="https://exchange.prx.org/">exchange.prx.org</a>. Memorize it, bookmark it, tattoo it on your arm.</p>
   </div>
 </div>
