@@ -24,14 +24,14 @@
     {@|apply open-graph.block}
 
     <squarespace:script src=modals.js combo=true />
-    <squarespace:script src=user-widget.js combo=true />
-    <squarespace:script src=domain.js combo=true />
-    <squarespace:script src=squarespace-imageloader.js combo=true />
-    <squarespace:script src=main-nav.js combo=true />
-    <squarespace:script src=about-nav.js combo=true />
-    <squarespace:script src=shows.js combo=true />
-    <squarespace:script src=homepage.js combo=true />
-    <squarespace:script src=backdrop.js combo=true />
+    <squarespace:script src=user-widget.js combo=false />
+    <squarespace:script src=domain.js combo=false />
+    <squarespace:script src=squarespace-imageloader.js combo=false />
+    <squarespace:script src=main-nav.js combo=false />
+    <squarespace:script src=about-nav.js combo=false />
+    <squarespace:script src=shows.js combo=false />
+    <squarespace:script src=homepage.js combo=false />
+    <squarespace:script src=backdrop.js combo=false />
 
     {squarespace-headers}
   </head>
