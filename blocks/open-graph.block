@@ -1,5 +1,5 @@
 <meta property=og:title content="PRX{.equal?:collection.urlId:"home"}{.or} – {collection.navigationTitle}{.end}" />
-<meta property=og:url content="https://www.prx.org/{.equal?:collection.urlId:"home"}{.or}{collection.urlId}{.end}" />
+<meta property=og:url content="https://corporate.prx.tech/{.equal?:collection.urlId:"home"}{.or}{collection.urlId}{.end}" />
 <meta property=og:site_name content=PRX />
 <meta property=og:locale content=en_US />
 <meta property=og:image content=https://media.prx.org/open-graph.png />
