@@ -23,7 +23,7 @@
 
     {@|apply open-graph.block}
 
-    <squarespace:script src=modals.js combo=true />
+    <squarespace:script src=modals.js combo=false />
     <squarespace:script src=user-widget.js combo=false />
     <squarespace:script src=domain.js combo=false />
     <squarespace:script src=squarespace-imageloader.js combo=false />
