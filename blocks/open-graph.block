@@ -1,4 +1,5 @@
 <meta property=og:title content="PRX{.equal?:collection.urlId:"home"}{.or} – {collection.navigationTitle}{.end}" />
+<meta property=og:description content="PRX is shaping the future of audio by building technology, training talented producers and connecting them with supportive listeners." />
 <meta property=og:url content="https://www.prx.org/{.equal?:collection.urlId:"home"}{.or}{collection.urlId}{.end}" />
 <meta property=og:site_name content=PRX />
 <meta property=og:locale content=en_US />
