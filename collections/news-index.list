@@ -23,7 +23,7 @@
           </section>
 
           <section>
-            <h4>Press Highlights</h4>
+            <h4>Content Highlights</h4>
             <squarespace:query collection=top-press-articles-collection columns=12 limit=10>
               <ul class=prx-news-collection>
                 {.repeated section items}
