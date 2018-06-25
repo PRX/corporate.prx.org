@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta http-equiv=x-ua-compatible content="ie=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name=description content=PRX>
+
+    <link rel=canonical href="https://www.prx.org/{.equal?:collection.urlId:"home"}{.or}{collection.urlId}{.end}">
+
+    <link rel=alternate type=application/rss+xml title="PRX Blog" href=https://medium.com/feed/public-radio-exchange>
+
+    <link rel=icon type=image/png href=https://media.prx.org/favicon-16x16.png sizes=16x16>
+    <link rel=icon type=image/png href=https://media.prx.org/favicon-32x32.png sizes=32x32>
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Montserrat:300,500,700|Open+Sans:300,400,400i,700,700i" rel="stylesheet">
+
+    {@|apply google-tag-manager.block}
+    {@|apply commitchange-script.block}
+
+    <title>PRX{.equal?:collection.urlId:"home"}{.or} – {collection.navigationTitle}{.end}</title>
+
+    {@|apply open-graph.block}
+
+    <squarespace:script src=modals.js combo=false />
+    <squarespace:script src=cookie-banner.js combo=false />
+    <squarespace:script src=domain.js combo=false />
+    <squarespace:script src=squarespace-imageloader.js combo=false />
+    <squarespace:script src=backdrop.js combo=false />
+
+    {squarespace-headers}
+  </head>
+  <body class="{squarespace.page-classes} {.equal?:collection.urlId:"home"}prx-home{.end}" id={squarespace.page-id}>
+    {@|apply google-tag-manager-noscript.block}
+
+
+    {.section collection}
+      <div id=prx-id-{urlId} class="prx-region-root prx-region-landing-page prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
+        {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
+
+        <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+      </div>
+    {.end}
+
+
+    {squarespace-footers}
+  </body>
+</html>
