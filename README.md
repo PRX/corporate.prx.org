@@ -32,4 +32,4 @@ This collection must have a URL slug of `homepage-features`. It is used to popul
 
 ### Press Highlights & Recent Press
 
-`top-press-articles-collection and `recent-press-articles-collection`. These posts show up on the Pressroom page. Use the post title and source URL, as well as the custom post options.
+`top-press-articles-collection` and `recent-press-articles-collection`. These posts show up on the Pressroom page. Use the post title and source URL, as well as the custom post options.
