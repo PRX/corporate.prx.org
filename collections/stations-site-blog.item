@@ -1,4 +1,21 @@
-Stations blog item
-<div id=prx-collection-item-stations_site class=prx-collection-item data-type=prx-page>
+{.section item}
+  <div id=prx-collection-item-stations_site class=prx-collection-item data-type=prx-page>
+    <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+      <h1 class="title" data-content-field="title">
+        {.passthrough?}
+          <a href="{sourceUrl}" target="_blank">{title}</a>
+        {.or}
+          {title}
+        {.end}
+      </h1>
 
-</div>
+      <p class="meta">
+        <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>
+      </p>
+
+      {body}
+
+      {postItemInjectCode}
+    </article>
+  </div>
+{.end}
