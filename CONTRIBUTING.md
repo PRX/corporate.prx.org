@@ -31,18 +31,23 @@ Every `.region` file should have a single root element with the following attrib
 
 This will allow styling for entire layouts and for specific top-level content in the CMS. Be aware that the `collection.urlId` will change if the **URL Slug** for the content changes in the CMS, so there is some fragility in styling specific webpages in this way, but it is easy and flexible.
 
-Every `.list` file for index pages should an element that wraps all the constituent pages with the following attributes:
+Every `.list` file for index pages should have an element that wraps all the constituent pages with the following attributes:
 
 - an `id` of `prx-index-list-{index name}`
 - a `class` of `prx-index-list`
 
-Within a `.list` file, each the `mainContent` for the constituent pages should, individually, be wrapped by an element with the following properties:
+Within an index-based `.list` file, each the `mainContent` for the constituent pages should, individually, be wrapped by an element with the following properties:
 
 - an `id` of `prx-id-{urlId}`
 - a `class` of `prx-id-{urlId}`
 - a class of prx-index-list-section
 
 Within that element, the `mainContent` should be wrapped directly by a `<section>` element.
+
+Every generic `.list` file (i.e., not for index collections) should have an element that wraps the content with the following attributes:
+
+- an `id` of `prx-collection-list-{collection name}`
+- a `class` of `prx-collection-list`
 
 # Squarespace Fundamentals
 
