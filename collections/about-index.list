@@ -39,7 +39,7 @@
               </label>
 
               <ul class="prx-people-tiles prx-toggle-target">
-                <squarespace:query collection=staff-collection columns=12 skip=6>
+                <squarespace:query collection=staff-collection columns=12 skip=6 limit=100>
                   {.repeated section items}{@|apply about-person.block}{.end}
                 </squarespace:query>
               </ul>
