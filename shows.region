@@ -35,7 +35,7 @@
     </section>
 
     <ul class=prx-show-tiles id=prx-show-grid>
-      <squarespace:query collection=shows-collection columns=12 skip=3 limit=15>
+      <squarespace:query collection=shows-collection columns=12 skip=3 limit=6>
         {.repeated section items}
           {@|apply show-tile.block}
         {.end}
@@ -65,7 +65,7 @@
     </section>
 
     <ul class=prx-show-tiles id=prx-show-grid>
-      <squarespace:query collection=shows-collection columns=12 skip=18 limit=100>
+      <squarespace:query collection=shows-collection columns=12 skip=9 limit=100>
         {.repeated section items}
           {@|apply show-tile.block}
         {.end}
