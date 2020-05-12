@@ -109,3 +109,68 @@
     }
   }
 }
+
+#prx-shows-trax {
+  background-repeat: no-repeat;
+  background-image: url(/assets/trax-bg.jpn);
+  color: @prxInverseTextColor;
+  margin: 60px 0;
+  overflow: hidden;
+  position: relative;
+
+  & > div {
+    padding: 0 3em;
+  }
+
+  .sqs-layout {
+    position: relative;
+    z-index: 5;
+  }
+
+  h2 {
+    font-weight: 300;
+    opacity: 1;
+  }
+
+  .sqs-block-button {
+    a.sqs-block-button-element--medium {
+      background: white;
+      color: @prxBlack;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+    }
+  }
+
+  .prx-trax-tiles-wrapper {
+    margin-left: -3em;
+    opacity: 0.35;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .prx-trax-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1035px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 10px 4px;
+      padding: 0;
+
+      img.show-artwork {
+        height: 190px;
+        width: 190px;
+      }
+    }
+  }
+}
