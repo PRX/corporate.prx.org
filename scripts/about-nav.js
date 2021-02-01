@@ -22,7 +22,7 @@ var companyAboutNav;
 var contentSections;
 var navLinks;
 
-function styleCompanyAboutNav(e) {
+function styleCompanyAboutNav(_) {
   if (!companyAboutNav) {
     companyAboutNav = document.getElementById('prx-about-nav');
     contentSections = document.querySelectorAll('#prx-index-list-about .prx-index-list-section');
@@ -58,7 +58,11 @@ try {
   passiveSupported = false;
 }
 
-if (document.getElementById('prx-about-nav')) {
-  window.addEventListener('DOMContentLoaded', styleCompanyAboutNav);
-  window.addEventListener('scroll', styleCompanyAboutNav, passiveSupported ? { passive: true } : false);
-}
+(async function () {
+  document.addEventListener('DOMContentLoaded', async (_) => {
+    if (document.getElementById('prx-about-nav')) {
+      styleCompanyAboutNav();
+      window.addEventListener('scroll', styleCompanyAboutNav, passiveSupported ? { passive: true } : false);
+    }
+  });
+})();
