@@ -58,8 +58,7 @@ try {
   passiveSupported = false;
 }
 
-if (window.location.href.includes('company/about')) {
+if (document.getElementById('prx-about-nav')) {
   window.addEventListener('DOMContentLoaded', styleCompanyAboutNav);
   window.addEventListener('scroll', styleCompanyAboutNav, passiveSupported ? { passive: true } : false);
 }
-
