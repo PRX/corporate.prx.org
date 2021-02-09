@@ -8,9 +8,14 @@ function isElementInViewport(el) {
 }
 
 function keepInWindow(sideNav) {
-  var navGroup = document.getElementById('prx-nav-group');
-  var maxAllowedScroll = navGroup.offsetHeight + 100; // 30px of padding-top on page
-  console.log(maxAllowedScroll)
+  // var navGroup = document.getElementById('prx-nav-group');
+  // var maxAllowedScroll = navGroup.offsetHeight + 100; // 30px of padding-top on page
+  // console.log(maxAllowedScroll)
+
+  const top = document.getElementById('prx-about-nav').getBoundingClientRect().top;
+  const margin = +window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop;
+
+  var maxAllowedScroll = top + margin;
 
   if (window.scrollY > maxAllowedScroll) {
     sideNav.classList.add('fixed');
