@@ -17,7 +17,7 @@ function keepInWindow(sideNav) {
 
   var maxAllowedScroll = top + margin;
 
-  if (window.scrollY > maxAllowedScroll) {
+  if (window.scrollY + margin > maxAllowedScroll) {
     sideNav.classList.add('fixed');
   } else {
     sideNav.classList.remove('fixed');
