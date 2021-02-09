@@ -7,7 +7,7 @@
       <a id=prx-homepage-features-rotate-right class="rotate right">»</a>
 
       <ol id=prx-homepage-features-dots>
-        <squarespace:query collection=homepage-features>
+        <squarespace:query collection=station-features>
           {.repeated section items}
             <li></li>
           {.end}
