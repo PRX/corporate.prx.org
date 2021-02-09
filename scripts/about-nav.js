@@ -7,15 +7,20 @@ function isElementInViewport(el) {
   );
 }
 
+let originalRectTop;
+
 function keepInWindow(sideNav) {
   // var navGroup = document.getElementById('prx-nav-group');
   // var maxAllowedScroll = navGroup.offsetHeight + 100; // 30px of padding-top on page
   // console.log(maxAllowedScroll)
 
-  const top = document.getElementById('prx-about-nav').getBoundingClientRect().top;
+  console.log(window.scrollY)
+
+  originalRectTop = originalRectTop || document.getElementById('prx-about-nav').getBoundingClientRect().top;
+
   const margin = parseInt(window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop);
 
-  var maxAllowedScroll = top + margin;
+  var maxAllowedScroll = originalRectTop + margin;
 
   if (window.scrollY - margin > maxAllowedScroll) {
     sideNav.classList.add('fixed');
