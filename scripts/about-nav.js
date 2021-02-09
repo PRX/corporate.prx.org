@@ -10,6 +10,7 @@ function isElementInViewport(el) {
 function keepInWindow(sideNav) {
   var navGroup = document.getElementById('prx-nav-group');
   var maxAllowedScroll = navGroup.offsetHeight + 100; // 30px of padding-top on page
+  console.log(maxAllowedScroll)
 
   if (window.scrollY > maxAllowedScroll) {
     sideNav.classList.add('fixed');
@@ -29,14 +30,14 @@ function styleCompanyAboutNav(_) {
     navLinks = document.querySelectorAll('#prx-about-nav a');
   }
 
-  keepInWindow(companyAboutNav)
+  keepInWindow(companyAboutNav);
 
   // Clear previously active link
   Array.from(navLinks).forEach(function (el) { el.classList.remove('active'); });
 
   for (let i = 0; i < contentSections.length; i++) {
     if (isElementInViewport(contentSections[i])) {
-      navLinks[i].classList.add('active')
+      navLinks[i].classList.add('active');
       break;
     }
   }
