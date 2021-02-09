@@ -1,0 +1,28 @@
+{.section collection}
+  <div id=prx-id-{urlId} class="prx-region-root prx-region-station-homepage prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
+    {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
+
+    <div id=prx-homepage-features-wrapper data-slide=1>
+      <a id=prx-homepage-features-rotate-left class=rotate>«</a>
+      <a id=prx-homepage-features-rotate-right class="rotate right">»</a>
+
+      <ol id=prx-homepage-features-dots>
+        <squarespace:query collection=homepage-features>
+          {.repeated section items}
+            <li></li>
+          {.end}
+        </squarespace:query>
+      </ol>
+
+      <div id=prx-homepage-features>
+        <squarespace:query collection=station-features>
+          {.repeated section items}
+            {@|apply homepage-feature.block}
+          {.end}
+        </squarespace:query>
+      </div>
+    </div>
+
+    <div role=main data-content-field=main-content>{squarespace.main-content}</div>
+  </div>
+{.end}
