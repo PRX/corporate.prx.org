@@ -13,7 +13,7 @@ function keepInWindow(sideNav) {
   // console.log(maxAllowedScroll)
 
   const top = document.getElementById('prx-about-nav').getBoundingClientRect().top;
-  const margin = +window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop;
+  const margin = +(window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop);
 
   var maxAllowedScroll = top + margin;
 
