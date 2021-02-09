@@ -16,7 +16,7 @@ function keepInWindow(sideNav) {
 
   console.log(window.scrollY)
 
-  originalRectTop = originalRectTop || document.getElementById('prx-about-nav').getBoundingClientRect().top;
+  originalRectTop = originalRectTop || document.getElementById('prx-about-nav').getBoundingClientRect().top + window.scrollY;
 
   const margin = parseInt(window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop);
 
