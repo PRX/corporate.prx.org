@@ -15,7 +15,7 @@ function keepInWindow(sideNav) {
   const top = document.getElementById('prx-about-nav').getBoundingClientRect().top;
   const margin = parseInt(window.getComputedStyle(document.getElementById('prx-about-nav')).marginTop);
 
-  var maxAllowedScroll = top - margin;
+  var maxAllowedScroll = top + margin;
 
   if (window.scrollY > maxAllowedScroll) {
     sideNav.classList.add('fixed');
