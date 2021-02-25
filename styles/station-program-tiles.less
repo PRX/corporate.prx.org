@@ -1,0 +1,48 @@
+.prx-station-program-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0;
+
+  &.filler {
+    min-width: 300px;
+
+    @media (max-width: 930px) { min-width: 260px; }
+    @media (max-width: 800px) { min-width: 220px; }
+    @media (max-width: 690px) { min-width: 200px; }
+    @media (max-width: 630px) { min-width: 182px; }
+    @media (max-width: 375px) { min-width: 165px; }
+    @media (max-width: 320px) { min-width: 120px; }
+  }
+
+  & > a {
+    display: block;
+    cursor: default;
+    position: relative;
+
+    img.show-artwork {
+      height: 300px;
+      width: 300px;
+
+      @media (max-width: 930px) { height: 260px; width: 260px; }
+      @media (max-width: 800px) { height: 220px; width: 220px; }
+      @media (max-width: 690px) { height: 200px; width: 200px; }
+      @media (max-width: 630px) { height: 182px; width: 182px; }
+      @media (max-width: 375px) { height: 165px; width: 165px; }
+      @media (max-width: 320px) { height: 120px; width: 120px; }
+    }
+
+    &:hover {
+      .show-morsel {
+        display: flex;
+
+        @media (max-width: @navBarsCollapseWidth) { display: none; }
+      }
+    }
+  }
+
+  .artwork-border {
+    border: 1px solid @prxLightGrey;
+  }
+}
