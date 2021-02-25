@@ -23,6 +23,18 @@
       </div>
     </div>
 
+    <squarespace:block-field id=prx-station-homepage-content-header columns=12 label="Content Header" />
+
+    <ul class=prx-station-program-tiles id=prx-station-program-grid-features>
+      <squarespace:query collection=station-programs-collection columns=12 limit=30>
+        {.repeated section items}
+          {@|apply station-program-tile.block}
+        {.end}
+      </squarespace:query>
+    </ul>
+
+    <!-- Programs grid -->
+
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>
   </div>
 {.end}
