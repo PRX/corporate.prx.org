@@ -1,3 +1,10 @@
+# Local development
+
+```bash
+npm install
+npm start
+```
+
 # Best Practices
 
 ## Version Control

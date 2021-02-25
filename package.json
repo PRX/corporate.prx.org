@@ -1,0 +1,23 @@
+{
+  "name": "corporate.prx.org",
+  "version": "1.0.0",
+  "description": "This is a [Squarespace](https://www.squarespace.com/) site template that is used for the public-facing website for PRX, which lives at [www.prx.org](https://www.prx.org/).",
+  "devDependencies": {
+    "@squarespace/server": "^1.7.0",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.16.0",
+    "eslint-config-squarespace": "^1.0.1"
+  },
+  "scripts": {
+    "start": "squarespace-server https://corporate-prx-org.squarespace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PRX/corporate.prx.org.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/PRX/corporate.prx.org/issues"
+  },
+  "homepage": "https://github.com/PRX/corporate.prx.org#readme"
+}
