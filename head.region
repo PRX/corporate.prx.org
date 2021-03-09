@@ -34,6 +34,7 @@
     <squarespace:script src=station-homepage.js combo=false />
     <squarespace:script src=homepage.js combo=false />
     <squarespace:script src=backdrop.js combo=false />
+    <squarespace:script src=classy.js combo=false />
 
     {squarespace-headers}
   </head>
