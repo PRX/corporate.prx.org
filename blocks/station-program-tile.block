@@ -4,7 +4,9 @@
       <img class=show-artwork {@|image-meta} />
 
       <span class=show-morsel>
-        <img class=program-audio-preview-control src=/assets/volume.svg data-audio-url="{customContent.audioPreviewUrl}">
+        {.if customContent.audioPreviewUrl}
+          <img class=program-audio-preview-control src=/assets/volume.svg data-audio-url="{customContent.audioPreviewUrl}">
+        {.end}
       </span>
     </a>
   </li>
