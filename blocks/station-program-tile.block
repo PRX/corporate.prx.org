@@ -1,6 +1,6 @@
 {.main-image?}
   <li class="{.if customContent.artworkBorder}artwork-border{.end}">
-    <a>
+    <a {.if sourceUrl}href="{sourceUrl}"{.end}>
       <img class=show-artwork {@|image-meta} />
 
       <span class=show-morsel>
