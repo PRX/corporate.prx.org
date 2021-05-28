@@ -4,6 +4,7 @@
   <div id=prx-id-{urlId} class="prx-region-root prx-region-segmented prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
+    <!-- This is selectively shown on Station Services show pages -->
     <nav class=prx-segmented-breadcrumb>
       <a href=/stations>Station Services</a> » <span>{title}</span>
     </nav>
