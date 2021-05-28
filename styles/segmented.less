@@ -89,9 +89,16 @@
     padding: 16px 0 0;
     margin: 0 auto;
     max-width: 997px;
+    display: none;
 
     a {
       border-bottom: 1px dotted #1c1c1c;
+    }
+  }
+
+  &[id^="prx-id-stations/shows/"] {
+    nav.prx-segmented-breadcrumb {
+      display: block;
     }
   }
 }
