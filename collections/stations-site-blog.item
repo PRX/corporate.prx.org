@@ -1,5 +1,9 @@
 {.section item}
   <div id=prx-collection-item-stations_site class=prx-collection-item data-type=prx-page>
+    <nav class=prx-stations_site-breadcrumb>
+      <a href="/stations/">Station Services</a> » <span>{title}</span>
+    </nav>
+
     <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
       <h1 class="title" data-content-field="title">
         {.passthrough?}
