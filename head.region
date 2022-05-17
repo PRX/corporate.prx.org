@@ -38,6 +38,7 @@
     {squarespace-headers}
   </head>
   <body class="{squarespace.page-classes} {.equal?:collection.urlId:"home"}prx-home{.end}" id={squarespace.page-id}>
+    <div id=top></div>
     {@|apply google-tag-manager-noscript.block}
 
     {@|apply nav-group.block}
