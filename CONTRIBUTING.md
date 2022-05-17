@@ -7,6 +7,8 @@ make dev-init
 make dev-start
 ```
 
+Open the site at `https://corporate.prx.test/` in a browser.
+
 # Deploying
 
 `make deploy`

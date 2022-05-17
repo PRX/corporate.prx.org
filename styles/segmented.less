@@ -83,6 +83,13 @@
       }
     }
 
+    // These elements inherit a font-size of 0px and expect to have an explicit
+    // font-size set, but our "p" rule above sets an "em" size, which keeps
+    // it at 0, so have to special case it and set it to something else.
+    .sqs-block-summary-v2 .summary-excerpt p {
+      font-size: 13px;
+    }
+
     hr {
       height: 6px;
       background: #FFB217;
