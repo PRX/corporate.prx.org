@@ -4,18 +4,20 @@
   <div id=prx-id-{urlId} class="prx-region-root prx-region-segmented prx-id-{urlId} {.main-image?}prx-backdrop{.end}">
     {.main-image?}<img {mainImage|image-meta} class=prx-backdrop>{.end}
 
-    <!-- This is selectively shown on Station Services show pages -->
-    <nav class=prx-segmented-breadcrumb>
-      <a href=/stations>Station Services</a> » <span>{title}</span>
-    </nav>
+    <div class="prx-segmented-precontent">
+      <!-- This is selectively shown on Station Services show pages -->
+      <nav class=prx-segmented-breadcrumb>
+        <a href=/stations>Station Services</a> » <span>{title}</span>
+      </nav>
 
-    <squarespace:block-field id="prx-segmented-{id}-header" columns=12 label="Header" />
+      <squarespace:block-field id="prx-segmented-{id}-header" columns=12 label="Header" />
 
-    <nav class=prx-segmented-segments>
-      {.repeated section collections}
-        <a href="/{@collectionUrlId}#{urlId}">{title}</a>
-      {.end}
-    </nav>
+      <nav class=prx-segmented-segments>
+        {.repeated section collections}
+          <a href="/{@collectionUrlId}#{urlId}">{title}</a>
+        {.end}
+      </nav>
+    </div>
 
     <div role=main data-content-field=main-content>{squarespace.main-content}</div>
 
