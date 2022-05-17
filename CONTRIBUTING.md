@@ -1,9 +1,17 @@
 # Local development
 
 ```bash
-npm install
-npm start
+# First-run only
+make dev-init
+
+make dev-start
 ```
+
+# Deploying
+
+`make deploy`
+
+This assumes you have a Git remote for Squarespace called `squarespace`
 
 # Best Practices
 

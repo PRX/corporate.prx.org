@@ -9,7 +9,7 @@
     "eslint-config-squarespace": "^1.0.1"
   },
   "scripts": {
-    "start": "squarespace-server https://corporate-prx-org.squarespace.com"
+    "start": "squarespace-server https://corporate-prx-org.squarespace.com --port 8074"
   },
   "repository": {
     "type": "git",
