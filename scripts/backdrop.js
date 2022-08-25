@@ -14,4 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     el.style.display = 'none';
     el.parentNode.style.backgroundImage = 'url(' + url + ')';
   });
+
+  document.querySelectorAll('iframe.prx-backdrop').forEach(function (el) {
+    const url = el.getAttribute('data-src');
+
+    let videoId;
+
+    if (url.match(/https:\/\/youtu.be\/([A-Za-z0-9_-]+)/)) {
+      videoId = url.match(/https:\/\/youtu.be\/([A-Za-z0-9_-]+)/)[1];
+    }
+
+    el.src = `https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1`;
+  });
 });
