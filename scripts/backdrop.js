@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
       videoId = url.match(/https:\/\/youtu.be\/([A-Za-z0-9_-]+)/)[1];
     }
 
-    el.src = `https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1`;
+    el.src = `https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1`;
   });
 });
