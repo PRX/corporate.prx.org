@@ -16,14 +16,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.querySelectorAll('iframe.prx-backdrop').forEach(function (el) {
-    const url = el.getAttribute('data-src');
+    const inputUrl = new URL(el.getAttribute('data-src'));
+    const outputUrl = new URL('https://youtube.com/');
 
-    let videoId;
-
-    if (url.match(/https:\/\/youtu.be\/([A-Za-z0-9_-]+)/)) {
-      videoId = url.match(/https:\/\/youtu.be\/([A-Za-z0-9_-]+)/)[1];
+    // Add video ID to the output URL
+    if (inputUrl.hostname === 'youtu.be') {
+      const videoId = inputUrl.pathname.match(/\/([A-Za-z0-9_-]+)/)[1];
+      console.log(videoId);
+      outputUrl.pathname = `/embed/${videoId}`;
     }
 
-    el.src = `https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1`;
+    // Copy any query params from the input URL to the output URL
+    for (const key of inputUrl.searchParams.keys()) {
+      outputUrl.searchParams.set(key, inputUrl.searchParams.get(key));
+
+      if (key === 't') {
+        outputUrl.searchParams.set('start', inputUrl.searchParams.get(key));
+      }
+    }
+
+    // Set required query params on output URL
+    outputUrl.searchParams.set('autoplay', '1');
+    outputUrl.searchParams.set('controls', '0');
+    outputUrl.searchParams.set('showinfo', '0');
+    outputUrl.searchParams.set('autohide', '1');
+    outputUrl.searchParams.set('mute', '1');
+
+    console.log(outputUrl.toString());
+    el.src = outputUrl.toString();
   });
 });
