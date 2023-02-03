@@ -11,9 +11,6 @@
 
     <link rel=alternate type=application/rss+xml title="PRX Blog" href=https://medium.com/feed/public-radio-exchange>
 
-    <link rel=icon type=image/png href=https://media.prx.org/favicon-16x16.png sizes=16x16>
-    <link rel=icon type=image/png href=https://media.prx.org/favicon-32x32.png sizes=32x32>
-
     <link rel=icon href=https://media.prx.org/favicon/icon-32.ico sizes=any>
     <link rel=icon href=https://media.prx.org/favicon/icon.svg type=image/svg+xml>
     <link rel=apple-touch-icon href=https://media.prx.org/favicon/icon-180.png>
