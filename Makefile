@@ -11,4 +11,4 @@ dev-start:
 
 deploy:
 	git push origin
-	git push squarespace
+	git push squarespace main:master
