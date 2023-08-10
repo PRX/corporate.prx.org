@@ -29,6 +29,8 @@
       {.end}
     </article>
 
+    <hr>
+
   {.or}
     <p><em>No blog posts yet.</em></p>
   {.end}
