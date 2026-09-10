@@ -39,7 +39,7 @@
             {# Only displyed on Staff page (section) }
             {.equal?:urlId:"staff"}
               <ul class=prx-people-tiles>
-                <squarespace:query collection=staff-collection columns=12 limit=6>
+                <squarespace:query collection=staff-collection columns=12 limit=7>
                   {.repeated section items}{@|apply about-person.block}{.end}
                 </squarespace:query>
               </ul>
@@ -50,7 +50,7 @@
               </label>
 
               <ul class="prx-people-tiles prx-toggle-target">
-                <squarespace:query collection=staff-collection columns=12 skip=6 limit=100>
+                <squarespace:query collection=staff-collection columns=12 skip=7 limit=100>
                   {.repeated section items}{@|apply about-person.block}{.end}
                 </squarespace:query>
               </ul>
